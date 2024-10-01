@@ -47,6 +47,14 @@ export const Questions = () => {
         </Accordion>
         <Accordion>
           <AccordionSummary>
+            Qual o valor do FRETE?
+          </AccordionSummary>
+          <AccordionDetails>
+            O valor do frete é de R$11,80. Ele é fixo para o Brasil todo pois é enviado pela modalidade Registro Módico, utilizado para o envio de livros, revistas entre outros materiais gráficos
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary>
             Posso usar qualquer material no livro?
           </AccordionSummary>
           <AccordionDetails>
