@@ -26,7 +26,7 @@ export const AboutMe = () => {
     sx={{
       pt: [3, 6],
       px: [2, 0],
-      mt: [-10, 10]
+      mt: [-10, 4]
       }}>
       <Grid
         container

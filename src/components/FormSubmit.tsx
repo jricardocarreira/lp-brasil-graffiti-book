@@ -40,6 +40,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
       sx={{
         pt: [3, 6],
         px: [2, 0],
+        my: [6, 4]
       }}>
       <div ref={plansRef}>
         <Stack justifyContent="center" alignItems="center">
