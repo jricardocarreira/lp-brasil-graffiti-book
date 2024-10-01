@@ -4,17 +4,9 @@ import {
   AccordionDetails,
   AccordionGroup,
   AccordionSummary,
-  Box,
-  Button,
-  Card,
   Container,
-  Grid,
-  IconButton,
-  Link,
-  Stack,
-  Typography,
+  Typography
 } from "@mui/joy";
-import React from "react";
 
 export const Questions = () => {
   return (
@@ -48,58 +40,51 @@ export const Questions = () => {
         })}
       >
         <Accordion>
-          <AccordionSummary>
-            Preciso ter conhecimento prévio em programação?
-          </AccordionSummary>
+          <AccordionSummary>Não sei graffiti, o livro é para mim?</AccordionSummary>
           <AccordionDetails>
-            Não, o curso foi pensado para designers e motions, não para
-            programadores. Não é necessário nenhum conhecimento prévio de
-            programação para acompanhar.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>Preciso saber Expressões?</AccordionSummary>
-          <AccordionDetails>
-            Não é ensinado sobre expressões durante o curso, então é importante
-            ter pelo menos um conhecimento básico para conseguir criar Scripts
-            melhores, porém não é necessário saber expressões para acompanhar as
-            aulas.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>Qual é a duração das aulas?</AccordionSummary>
-          <AccordionDetails>
-            As aulas teoricas são curtas e diretas ao ponto, com duração de 5-7
-            minutos cada.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>Qual a duração do curso?</AccordionSummary>
-          <AccordionDetails>
-            A duração do curso somando teoria e projeto prático é de 7 horas
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>O que vou aprender no curso?</AccordionSummary>
-          <AccordionDetails>
-            Você aprenderá o essencial para criar seus primeiros scripts para
-            After Effects, partindo do absoluto zero. O curso inclui teoria e 5
-            projetos práticos de diferentes níveis de dificuldade.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>Existe garantia de reembolso?</AccordionSummary>
-          <AccordionDetails>
-            Sim, há uma garantia de reembolso de 7 dias.
+            Com certeza! O Brasil Graffiti Book é perfeito tanto para iniciantes. Se você está começando agora, as fotografias e ilustrações vão te inspirar e ajudar a desenvolver suas habilidades. Você pode usar as páginas para praticar, experimentar novas técnicas e fazer esboços.
           </AccordionDetails>
         </Accordion>
         <Accordion>
           <AccordionSummary>
-            O curso é adequado para iniciantes?
+            Posso usar qualquer material no livro?
           </AccordionSummary>
           <AccordionDetails>
-            Sim, o curso foi estruturado para ser acessível a iniciantes, com
-            uma progressão gradual e linguagem amigável.
+            Os principais materiais, sim! O Brasil Graffiti Book é feito de um papel revestido resistente que aceita uma variedade de materiais. Você pode usar canetas marcadoras, tintas spray, pincel com tinta, squeezers e muito mais. É muita versatilidade!
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary>
+            Quantas folhas tem no livro?
+          </AccordionSummary>
+          <AccordionDetails>
+            O livro contém 52 folhas de fotografias originais capturadas por um fotógrafo profissional, imagens de paredes, muros de tijolos, portões de alumínio e do metrô de São Paulo.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary>Já faço graffiti, como posso usar o livro?</AccordionSummary>
+          <AccordionDetails>
+            Se você já é grafiteiro, o Brasil Graffiti Book é perfeito para convidar outros artistas para deixar suas assinaturas e personas nele. É uma maneira única de registrar as conexões que o graffiti faz na sua vida.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary>
+            Como posso comprar o livro?
+          </AccordionSummary>
+          <AccordionDetails>
+            Você pode garantir o seu Brasil Graffiti Book nessa página, no botão verde de "Fazer Pedido". Basta clicar nele e aguardar que eu vou te responder.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary>O livro estará disponível em lojas físicas?</AccordionSummary>
+          <AccordionDetails>
+            Inicialmente, o Brasil Graffiti Book estará disponível online e também será distribuido nas Lojas Real Grapixo e na Banca Forte, ambas localizadas em Belo Horizonte.
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary>Como posso acompanhar as novidades sobre o Brasil Graffiti Book?</AccordionSummary>
+          <AccordionDetails>
+            Siga-me nas redes sociais para ficar por dentro de todas as novidades e conteúdos exclusivos relacionados ao Brasil Graffiti Book. Você pode me encontrar no Instagram, YouTube e TikTok.
           </AccordionDetails>
         </Accordion>
       </AccordionGroup>

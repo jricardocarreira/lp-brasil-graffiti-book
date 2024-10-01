@@ -11,7 +11,7 @@ export const Banner = () => {
         sx={{
           py: 1.5,
           px: [4, 0],
-          bgcolor: "danger.solidActiveBg",
+          bgcolor: "danger.plainColor",
           position: "fixed",
           zIndex: 999,
           top: 0,
@@ -25,8 +25,7 @@ export const Banner = () => {
           sx={{ justifyContent: "center", alignItems: "center" }}
         >
           <Typography textAlign="center" sx={{ color: "white" }}>
-            <strong>ATENÇÃO:</strong> o desconto de lançamento de R$200 (30%
-            OFF) pode acabar a qualquer momento sem aviso!
+            <strong>ATENÇÃO:</strong> poucas unidades disponíveis para esse lançamento!
           </Typography>
           <IconButton size="sm" onClick={() => setOpen(false)}>
             <CloseIcon sx={{ color: "white" }} />

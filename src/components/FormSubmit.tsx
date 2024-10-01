@@ -1,18 +1,21 @@
+import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import {
+  Alert,
+  Box,
   Button,
+  Container,
   IconButton,
   Input,
   Stack,
   Typography,
-  Alert,
-  Container,
 } from "@mui/joy";
-import React, { useState } from "react";
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import posthog from "posthog-js";
+import React, { RefObject, useState } from "react";
 
-export const FormSubmit = () => {
+type Props = { plansRef: RefObject<HTMLDivElement> };
+
+export const FormSubmit = ({ plansRef }: Props) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
@@ -34,15 +37,43 @@ export const FormSubmit = () => {
   };
 
   return (
-    <Container disableGutters sx={{ mt: 6, px: [2, 0] }}>
-      <Typography level="h2" color="primary" textAlign="center">
-        Fazer Pedido
-      </Typography>
-      <Typography level="body-md" textAlign="center" sx={{ mb: 4, mt: 1 }}>
-        Textinho menor aqui
-      </Typography>
+    <Container
+      disableGutters
+      sx={{
+        pt: [3, 6],
+        px: [2, 0],
+      }}>
+      <div ref={plansRef}>
+        <Stack justifyContent="center" alignItems="center">
+          <Typography
+            level="h2"
+            textAlign="center"
+            sx={{ fontSize: [24, 32, 40] }}
+            maxWidth={[450, 450, 550]}
+          >
+            Garanta seu
+            {' '}
+            <Box
+              component={'span'}
+              display={'inline'}
+              sx={{ color: 'primary.500' }}>
+              Brasil Graffiti Book
+            </Box> {' '}
+            por RS93!
+            
+          </Typography>
+          <Typography
+          level="body-md"
+          textAlign="center"
+          maxWidth={[440]}
+          sx={{ mb: [2, 4], mt: 1 }}>
+            Leve as ruas na palma da sua mão e<b> desenhe graffiti em qualquer hora e lugar</b>!
+          </Typography>
+        </Stack>
+      </div>
+
       <form onSubmit={handleSubmit}>
-        <Stack spacing={1}>
+        <Stack spacing={1} px={[0, 6]}>
           <Input
             size="lg"
             placeholder="Nome"
@@ -84,7 +115,6 @@ export const FormSubmit = () => {
           </Button>
         </Stack>
       </form>
-
       {successMessage && (
         <Alert
           sx={{

@@ -8,28 +8,29 @@ import { Bonuses } from "@/components/Bonuses";
 import { Price } from "@/components/Price";
 import { Questions } from "@/components/Questions";
 import { FormSubmit } from "@/components/FormSubmit";
+import KnowAbout from "@/components/KnowAbout";
+import { useRef } from "react";
 
 export default function Home() {
+  const plansRef = useRef<HTMLDivElement>(null);
+
   return (
     <>
       <Head>
-        <title>Create Script</title>
+        <title>Brasil Graffiti Book</title>
         <meta
-          name="description"
-          content="Aprenda a criar seus primeiros scripts para After Effects, mesmo sem experiência prévia em programação!"
+          name="Brasil Graffiti Book"
+          content="Conheça o Brasil Graffiti Book, o livro que traz imagens autorais das ruas de São Paulo, feito para entusiastas, artistas amadores e profissionais!"
         />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
         <Container maxWidth="md">
-          <HeroSection />
-          <FormSubmit />
-          <Benefits />
-          <ButtonSection />
-          <Bonuses />
+          <HeroSection plansRef={plansRef}/>
+          <KnowAbout />
+          <FormSubmit plansRef={plansRef}/>
           <AboutMe />
-          <Price />
           <Questions />
         </Container>
       </main>

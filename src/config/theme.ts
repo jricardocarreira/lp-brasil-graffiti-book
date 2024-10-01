@@ -10,30 +10,37 @@ const theme = extendTheme({
       xl: 1536,
     },
   },
+    fontFamily: {
+      body: 'Poppins',
+      display: 'Poppins'
+    },
   colorSchemes: {
-    dark: {
+    light: {
       palette: {
         primary: {
-          50: "#f5eefb",
-          100: "#efe5f8",
-          200: "#dfccf2",
-          300: "#c5a0e7",
-          400: "#9553d3",
-          500: "#6d1fb7",
-          600: "#602696",
-          700: "#481d70",
-          800: "#28103e",
-          900: "#140820",
+          100: "#ffd1ae", 
+          200: "#ffb37d", 
+          300: "#ff914b", 
+          400: "#ff6f24", 
+          500: "#F86E00",
+          600: "#d76100", 
+          700: "#b45400", 
+          800: "#923f00", 
+          900: "#5e2800",
         },
-        // background: {
-        //   body: "#060909",
-        //   level1: "#171d1d",
-        //   level2: "#313c3c",
-        //   level3: "#666f6f",
-        //   popup: "#060909",
-        //   surface: "#171d1d",
-        //   tooltip: "#666f6f",
-        // },
+        text: {
+          primary: "#222",
+          secondary: "#222",
+        },/* 
+        background: {
+          body: "#ffffff",       
+          level1: "#f8f9fa",      
+          level2: "#e9ecef",    
+          level3: "#dee2e6",     
+          popup: "#ffffff",      
+          surface: "#f1f3f5",    
+          tooltip: "#212529",     
+        } */
       },
     },
   },

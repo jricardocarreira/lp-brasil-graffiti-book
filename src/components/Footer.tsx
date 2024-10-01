@@ -4,12 +4,20 @@ import React from "react";
 export const Footer = () => {
   return (
     <Container
-      sx={{ mt: [4, 10], py: 3, bgcolor: "background.level1" }}
+      sx={{
+         mt: [4, 10],
+          py: 3,
+          backgroundImage: "url('/bg-brick.webp')",
+          backgroundSize: "cover", 
+          backgroundPosition: "center", 
+          backgroundRepeat: "no-repeat", 
+        
+       }}
       disableGutters={true}
       maxWidth={false}
     >
-      <Typography textAlign="center">
-        © 2024 Gabriel Carreira. All rights reserved.
+      <Typography textAlign="center" sx={{color: "white"}}>
+        © 2024 Bug063. All rights reserved.
       </Typography>
     </Container>
   );
