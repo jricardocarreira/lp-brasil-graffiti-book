@@ -1,16 +1,11 @@
-import InstagramIcon from '@mui/icons-material/Instagram'; // Importando o ícone do Instagram
-import YouTubeIcon from '@mui/icons-material/YouTube'; // Importando o ícone do YouTube
 import {
   Box,
   Container,
   Grid,
-  IconButton,
-  Stack,
   Typography,
   TypographySystem
 } from "@mui/joy";
 import { SxProps } from "@mui/joy/styles/types";
-import Link from "next/link";
 
 interface TextProps {
   level: keyof TypographySystem;
@@ -51,24 +46,6 @@ export const AboutMe = () => {
             Sou grafiteiro há 13 anos, natural de Palmas, Tocantins, na Região Norte do Brasil. Além do graffiti, faço arte digital, adesivos, quadros e customizações, usando minha arte para desenvolver projetos que beneficiem a comunidade e a cultura.
             Um dos meus projetos independentes é o "Cola na Causa", que arrecada recursos para a proteção animal. Faço isso vendendo minhas artes autorais e recebendo doações diretas para o projeto. O projeto realizará sua terceira edição em 2024.
           </Typography>
-          <Stack direction="row" alignItems="center" justifyContent={"center"} spacing={1} sx={{ mt: 2 }}>
-            <Link
-              href="https://www.instagram.com/bug063"
-              target="_blank"
-            >
-              <IconButton size="md">
-                <InstagramIcon />
-              </IconButton>
-            </Link>
-            <Link
-              href="https://www.youtube.com/@bug063"
-              target="_blank"
-            >
-              <IconButton size="md">
-                <YouTubeIcon />
-              </IconButton>
-            </Link>
-          </Stack>
         </Grid>
         <Grid xs={12} sm={4}>
           <Box sx={{ mt: [10, 0], mb: [-1, 0], mx: [10, 0] }}>

@@ -59,7 +59,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
               sx={{ color: 'primary.500' }}>
               Brasil Graffiti Book
             </Box> {' '}
-            por RS93!
+            por R$93!
             
           </Typography>
           <Typography
