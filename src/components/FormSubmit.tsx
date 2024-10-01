@@ -16,6 +16,7 @@ import React, { RefObject, useState } from "react";
 type Props = { plansRef: RefObject<HTMLDivElement> };
 
 export const FormSubmit = ({ plansRef }: Props) => {
+  const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
@@ -25,9 +26,9 @@ export const FormSubmit = ({ plansRef }: Props) => {
     const formData = new FormData(event.currentTarget);
     const formJson = Object.fromEntries((formData as any).entries());
 
-    posthog.capture('form_submit', formJson);
+    posthog.identify(email, formJson);
 
-    setSuccessMessage("Em breve entrarei em contato!");
+    setSuccessMessage("Em breve entrei em contato!");
 
     setTimeout(() => {
       setSuccessMessage(null);
@@ -40,7 +41,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
       sx={{
         pt: [3, 6],
         px: [2, 0],
-        mt: [4, 4]
+        mt: 4
       }}>
       <div ref={plansRef}>
         <Stack justifyContent="center" alignItems="center">
@@ -50,14 +51,16 @@ export const FormSubmit = ({ plansRef }: Props) => {
             sx={{ fontSize: [24, 32, 40] }}
             maxWidth={[450, 450, 550]}
           >
-            Garanta seu{' '}
+            Garanta seu
+            {' '}
             <Box
               component={'span'}
               display={'inline'}
               sx={{ color: 'primary.500' }}>
               Brasil Graffiti Book
-            </Box>{' '}
+            </Box> {' '}
             por R$93!
+
           </Typography>
           <Typography
             level="body-md"
@@ -87,6 +90,15 @@ export const FormSubmit = ({ plansRef }: Props) => {
             type="tel"
             value={phone}
             onChange={(e) => setPhone(e.target.value)}
+            required
+          />
+          <Input
+            size="lg"
+            placeholder="Email"
+            name="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <Button color="success" size="lg" type="submit">
@@ -127,5 +139,5 @@ export const FormSubmit = ({ plansRef }: Props) => {
         </Alert>
       )}
     </Container>
-  )
-}
+  );
+};
