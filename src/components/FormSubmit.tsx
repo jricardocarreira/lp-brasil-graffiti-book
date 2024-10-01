@@ -19,7 +19,6 @@ export const FormSubmit = ({ plansRef }: Props) => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [phone, setPhone] = useState("");
-  const [address, setAdress] = useState("");
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
@@ -60,13 +59,13 @@ export const FormSubmit = ({ plansRef }: Props) => {
               Brasil Graffiti Book
             </Box> {' '}
             por R$93!
-            
+
           </Typography>
           <Typography
-          level="body-md"
-          textAlign="center"
-          maxWidth={[440]}
-          sx={{ mb: [2, 4], mt: 1 }}>
+            level="body-md"
+            textAlign="center"
+            maxWidth={[440]}
+            sx={{ mb: [2, 4], mt: 1 }}>
             Leve as ruas na palma da sua mão e<b> desenhe graffiti em qualquer hora e lugar</b>!
           </Typography>
         </Stack>
@@ -85,15 +84,6 @@ export const FormSubmit = ({ plansRef }: Props) => {
           />
           <Input
             size="lg"
-            placeholder="Email"
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Input
-            size="lg"
             placeholder="DDD + Whatsapp"
             name="phone"
             type="tel"
@@ -103,11 +93,11 @@ export const FormSubmit = ({ plansRef }: Props) => {
           />
           <Input
             size="lg"
-            placeholder="Endereço"
-            name="address"
-            type="address"
-            value={address}
-            onChange={(e) => setAdress(e.target.value)}
+            placeholder="Email"
+            name="email"
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             required
           />
           <Button color="success" size="lg" type="submit">
