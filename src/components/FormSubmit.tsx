@@ -72,7 +72,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
       </div>
 
       <form onSubmit={handleSubmit}>
-        <Stack spacing={1} px={[0, 6]}>
+        <Stack spacing={1} px={[0, 12]}>
           <Input
             size="lg"
             placeholder="Nome"
