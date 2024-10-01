@@ -21,12 +21,18 @@ interface TextProps {
 export const AboutMe = () => {
   const title: TextProps = {
     level: "h1",
-    sx: { fontSize: [32, 36, 40], mx: [4, 0] },
+    sx: { fontSize: [32, 36, 40], mx: [6, 0] },
     textAlign: ["center", "left"],
   };
 
   return (
-    <Container disableGutters sx={{ mt: [-10, 10] }}>
+    <Container
+    disableGutters
+    sx={{
+      pt: [3, 6],
+      px: [2, 0],
+      mt: [-10, 10]
+      }}>
       <Grid
         container
         direction={{ xs: "column-reverse", sm: "row" }}
@@ -41,7 +47,7 @@ export const AboutMe = () => {
               BUG
             </Box>
           </Typography>
-          <Typography level="body-sm" sx={{ mt: 2, mx: [4, 0] }} textAlign={["center", "left"]}>
+          <Typography level="body-sm" sx={{ mt: 2 }} textAlign={["center", "left"]}>
             Sou grafiteiro há 13 anos, natural de Palmas, Tocantins, na Região Norte do Brasil. Além do graffiti, faço arte digital, adesivos, quadros e customizações, usando minha arte para desenvolver projetos que beneficiem a comunidade e a cultura.
             Um dos meus projetos independentes é o "Cola na Causa", que arrecada recursos para a proteção animal. Faço isso vendendo minhas artes autorais e recebendo doações diretas para o projeto. O projeto realizará sua terceira edição em 2024.
           </Typography>

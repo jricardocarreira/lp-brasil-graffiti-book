@@ -21,7 +21,7 @@ export const HeroSection = ({ plansRef }: Props) => {
         px: [2, 0],
       }}
     >
-      <Box>
+      <Stack alignItems={"center"}>
         <Typography
           level="h1"
           textAlign="center"
@@ -34,10 +34,11 @@ export const HeroSection = ({ plansRef }: Props) => {
           level="body-md"
           textAlign={"center"}
           fontWeight={600}
+          maxWidth={[200, "none", "none"]}
         >
           O sketchbook que traz as ruas para suas mãos
         </Typography>
-      </Box>
+      </Stack>
       <Stack
         justifyContent="center"
         alignItems={["center", "start"]}
