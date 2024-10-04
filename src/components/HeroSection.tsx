@@ -1,5 +1,6 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/joy";
 import { RefObject } from "react";
+import YoutubeVideo from "./YoutubeVideo";
 
 type Props = { plansRef: RefObject<HTMLDivElement> };
 
@@ -69,6 +70,7 @@ export const HeroSection = ({ plansRef }: Props) => {
             width: "100%",
             maxWidth: [200, 200, 300],
             borderRadius: 8,
+            display: ["none", "block"]
           }}
         />
       </Stack>
@@ -78,9 +80,9 @@ export const HeroSection = ({ plansRef }: Props) => {
           id="button-checkout-hero"
         >GARANTIR O MEU BOOK</Button>
       </Box>
-      {/*       <Box sx={{ mt: 5 }}>
-        <YoutubeVideo embed="sHXL7ZEKiTI" />
-      </Box> */}
+            <Box sx={{ mt: [2,4] }}>
+        <YoutubeVideo embed="gdRdBVgMOBQ" />
+      </Box>
     </Container>
   );
 };

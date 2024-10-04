@@ -38,7 +38,7 @@ export const Footer = () => {
         </Link>
       </Stack>
       <Typography textAlign="center" sx={{ color: "white" }}>
-        © 2024 Bug063. All rights reserved.
+        © BRASIL GRAFFITI BOOK 2024. All rights reserved.
       </Typography>
     </Container>
   );
