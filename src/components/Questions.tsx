@@ -90,6 +90,12 @@ export const Questions = () => {
           </AccordionDetails>
         </Accordion>
         <Accordion>
+          <AccordionSummary>Quais as formas de pagamento?</AccordionSummary>
+          <AccordionDetails>
+            PIX e Cartão de crédito (à vista/parcelado) via link de pagamento do Mercado Pago
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
           <AccordionSummary>Como posso acompanhar as novidades sobre o Brasil Graffiti Book?</AccordionSummary>
           <AccordionDetails>
             Siga-me nas redes sociais para ficar por dentro de todas as novidades e conteúdos exclusivos relacionados ao Brasil Graffiti Book. Você pode me encontrar no Instagram, YouTube e TikTok.
