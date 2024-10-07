@@ -21,7 +21,7 @@ export const Footer = () => {
     >
       <Stack direction="row" alignItems="center" justifyContent={"center"} spacing={1} sx={{ mb: 1 }}>
         <Link
-          href="https://www.instagram.com/bug063"
+          href="https://www.instagram.com/brasilgraffitibook"
           target="_blank"
         >
           <IconButton size="md" sx={{ "&:hover svg": { color: "gray" } }}>
