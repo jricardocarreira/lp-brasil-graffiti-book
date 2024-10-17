@@ -25,7 +25,7 @@ export const Banner = () => {
           sx={{ justifyContent: "center", alignItems: "center" }}
         >
           <Typography textAlign="center" sx={{ color: "white" }}>
-            <strong>ATENÇÃO:</strong> restam APENAS 5 UNIDADES disponíveis!
+            <strong>ATENÇÃO:</strong> restam APENAS 2 UNIDADES disponíveis!
           </Typography>
           <IconButton size="sm" onClick={() => setOpen(false)}>
             <CloseIcon sx={{ color: "white" }} />
