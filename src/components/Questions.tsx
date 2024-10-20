@@ -42,7 +42,7 @@ export const Questions = () => {
         <Accordion>
           <AccordionSummary>Não sei graffiti, o livro é para mim?</AccordionSummary>
           <AccordionDetails>
-            Com certeza! O Brasil Graffiti Book é perfeito tanto para iniciantes. Se você está começando agora, as fotografias e ilustrações vão te inspirar e ajudar a desenvolver suas habilidades. Você pode usar as páginas para praticar, experimentar novas técnicas e fazer esboços.
+            Com certeza! O Brasil Graffiti Book é perfeito para iniciantes. Se você está começando agora, as fotografias vão te inspirar e ajudar a desenvolver suas habilidades. Você pode usar as páginas para praticar, experimentar novas técnicas e fazer esboços.
           </AccordionDetails>
         </Accordion>
         <Accordion>
@@ -98,7 +98,7 @@ export const Questions = () => {
         <Accordion>
           <AccordionSummary>Como posso acompanhar as novidades sobre o Brasil Graffiti Book?</AccordionSummary>
           <AccordionDetails>
-            Siga-me nas redes sociais para ficar por dentro de todas as novidades e conteúdos exclusivos relacionados ao Brasil Graffiti Book. Você pode me encontrar no Instagram, YouTube e TikTok.
+            Siga-me nas redes sociais para ficar por dentro de todas as novidades e conteúdos exclusivos relacionados ao Brasil Graffiti Book. Você pode nos encontrar no Instagram, YouTube e TikTok.
           </AccordionDetails>
         </Accordion>
       </AccordionGroup>

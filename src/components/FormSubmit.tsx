@@ -49,26 +49,29 @@ export const FormSubmit = ({ plansRef }: Props) => {
             level="h2"
             textAlign="center"
             sx={{ fontSize: [24, 32, 40] }}
-            maxWidth={[450, 450, 550]}
+            maxWidth={[250, 550, 650]}
           >
-            Garanta seu
+            Garanta seu Brasil Graffiti Book
             {' '}
             <Box
               component={'span'}
               display={'inline'}
               sx={{ color: 'primary.500' }}>
-              Brasil Graffiti Book
-            </Box> {' '}
-            por R$93!
-
+              antes que esgote de novo
+            </Box>
+            !
           </Typography>
-          <Typography
-            level="body-md"
+          <Stack
             textAlign="center"
             maxWidth={[440]}
-            sx={{ mb: [2, 4], mt: 1 }}>
-            Leve as ruas na palma da sua mão e<b> desenhe graffiti em qualquer hora e lugar</b>!
-          </Typography>
+            gap={1}
+            sx={{ mb: [2, 4], mt: 1 }}
+          >
+            <Typography
+              level="body-md">
+              Novas unidades em produção. Preencha abaixo para ser avisado assim que estiver disponível!
+            </Typography>
+          </Stack>
         </Stack>
       </div>
 
@@ -102,7 +105,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
             required
           />
           <Button color="success" size="lg" type="submit">
-            Fazer Pedido
+            Ser Avisado
           </Button>
         </Stack>
       </form>
