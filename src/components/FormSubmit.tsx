@@ -49,17 +49,18 @@ export const FormSubmit = ({ plansRef }: Props) => {
             level="h2"
             textAlign="center"
             sx={{ fontSize: [24, 32, 40] }}
-            maxWidth={[250, 550, 650]}
+            maxWidth={[250, 550, 600]}
           >
-            Garanta seu Brasil Graffiti Book
+            Garanta seu
             {' '}
             <Box
               component={'span'}
               display={'inline'}
               sx={{ color: 'primary.500' }}>
-              antes que esgote de novo
+              Brasil Graffiti Book
             </Box>
-            !
+            {' '}
+            por R$93!
           </Typography>
           <Stack
             textAlign="center"
@@ -69,7 +70,14 @@ export const FormSubmit = ({ plansRef }: Props) => {
           >
             <Typography
               level="body-md">
-              Novas unidades em produção. Preencha abaixo para ser avisado assim que estiver disponível!
+              Leve as ruas na palma da sua mão e
+              {' '}
+              <Box
+                component={'span'}
+                display={'inline'}
+                sx={{ fontWeight: "700" }}>
+                desenhe graffiti em qualquer hora e lugar!
+              </Box>
             </Typography>
           </Stack>
         </Stack>

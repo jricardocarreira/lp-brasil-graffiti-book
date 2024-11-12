@@ -11,7 +11,7 @@ export const Banner = () => {
         sx={{
           py: 1.5,
           px: [4, 0],
-          bgcolor: "success.plainColor",
+          bgcolor: "danger.plainColor",
           position: "fixed",
           zIndex: 999,
           top: 0,
@@ -25,7 +25,7 @@ export const Banner = () => {
           sx={{ justifyContent: "center", alignItems: "center" }}
         >
           <Typography textAlign="center" sx={{ color: "white" }}>
-            <strong>ATENÇÃO:</strong> Novas unidades em produção! Garanta o seu agora!
+            <strong>ATENÇÃO:</strong> Novas unidades disponíveis! Garanta antes que se esgote de novo!
           </Typography>
           <IconButton size="sm" onClick={() => setOpen(false)}>
             <CloseIcon sx={{ color: "white" }} />
