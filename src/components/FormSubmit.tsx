@@ -28,7 +28,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
 
     posthog.identify(email, formJson);
 
-    setSuccessMessage("Em breve entrei em contato!");
+    setSuccessMessage("Em breve entrarei em contato!");
 
     setTimeout(() => {
       setSuccessMessage(null);
@@ -113,7 +113,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
             required
           />
           <Button color="success" size="lg" type="submit">
-            Ser Avisado
+            Fazer Pedido
           </Button>
         </Stack>
       </form>
@@ -126,7 +126,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
             left: "50%",
             transform: "translateX(-50%)",
             zIndex: 9999,
-            width: "auto",
+            width: 320,
           }}
           startDecorator={<CheckCircleIcon />}
           variant="soft"
@@ -144,7 +144,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
           <div>
             <div>Sucesso</div>
             <Typography level="body-sm" color="success">
-              {successMessage}
+              {successMessage} Em breve entrarei em contato!
             </Typography>
           </div>
         </Alert>
