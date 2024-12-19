@@ -1,19 +1,12 @@
-import Head from "next/head";
-import { Container } from "@mui/joy";
-import { HeroSection } from "@/components/HeroSection";
-import { Benefits } from "@/components/Benefits";
 import { AboutMe } from "@/components/AboutMe";
-import { ButtonSection } from "@/components/ButtonSection";
-import { Bonuses } from "@/components/Bonuses";
-import { Price } from "@/components/Price";
-import { Questions } from "@/components/Questions";
 import { FormSubmit } from "@/components/FormSubmit";
+import { HeroSection } from "@/components/HeroSection";
 import KnowAbout from "@/components/KnowAbout";
-import { useRef } from "react";
+import { Questions } from "@/components/Questions";
+import { Container } from "@mui/joy";
+import Head from "next/head";
 
 export default function Home() {
-  const plansRef = useRef<HTMLDivElement>(null);
-
   return (
     <>
       <Head>
@@ -30,9 +23,9 @@ export default function Home() {
       </Head>
       <main>
         <Container maxWidth="md">
-          <HeroSection plansRef={plansRef} />
+          <HeroSection />
           <KnowAbout />
-          <FormSubmit plansRef={plansRef} />
+          <FormSubmit />
           <AboutMe />
           <Questions />
         </Container>
