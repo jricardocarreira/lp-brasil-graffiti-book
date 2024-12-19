@@ -12,27 +12,13 @@ import {
 } from "@mui/joy";
 import posthog from "posthog-js";
 import React, { RefObject, useState } from "react";
+import { CheckoutModal } from "./CheckoutModal";
 
-type Props = { plansRef: RefObject<HTMLDivElement> };
+export const FormSubmit = () => {
+  const [openModal, setOpenModal] = useState(false);
 
-export const FormSubmit = ({ plansRef }: Props) => {
-  const [email, setEmail] = useState("");
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [successMessage, setSuccessMessage] = useState<string | null>(null);
-
-  const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const formData = new FormData(event.currentTarget);
-    const formJson = Object.fromEntries((formData as any).entries());
-
-    posthog.identify(email, formJson);
-
-    setSuccessMessage("Em breve entrarei em contato!");
-
-    setTimeout(() => {
-      setSuccessMessage(null);
-    }, 5000);
+  const handleModalOpen = () => {
+    setOpenModal(true);
   };
 
   return (
@@ -43,7 +29,6 @@ export const FormSubmit = ({ plansRef }: Props) => {
         px: [2, 0],
         mt: 4
       }}>
-      <div ref={plansRef}>
         <Stack justifyContent="center" alignItems="center">
           <Typography
             level="h2"
@@ -60,7 +45,7 @@ export const FormSubmit = ({ plansRef }: Props) => {
               Brasil Graffiti Book
             </Box>
             {' '}
-            por R$93!
+            por R$98!
           </Typography>
           <Stack
             textAlign="center"
@@ -80,75 +65,23 @@ export const FormSubmit = ({ plansRef }: Props) => {
               </Box>
             </Typography>
           </Stack>
-        </Stack>
-      </div>
 
-      <form onSubmit={handleSubmit}>
-        <Stack spacing={1} px={[0, 12]}>
-          <Input
-            size="lg"
-            placeholder="Nome"
-            name="name"
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <Input
-            size="lg"
-            placeholder="DDD + Whatsapp"
-            name="phone"
-            type="tel"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            required
-          />
-          <Input
-            size="lg"
-            placeholder="Email"
-            name="email"
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            required
-          />
-          <Button color="success" size="lg" type="submit">
-            Fazer Pedido
-          </Button>
-        </Stack>
-      </form>
-      {successMessage && (
-        <Alert
-          sx={{
-            alignItems: "flex-start",
-            position: "fixed",
-            bottom: 16,
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 9999,
-            width: 320,
-          }}
-          startDecorator={<CheckCircleIcon />}
-          variant="soft"
-          color="success"
-          endDecorator={
-            <IconButton
-              variant="soft"
+          <Box sx={{ display: "flex", justifyContent: "center"}}>
+            <Button
+              size="lg"
               color="success"
-              onClick={() => setSuccessMessage(null)}
+              onClick={handleModalOpen}
+              id="button-checkout-form"
             >
-              <CloseRoundedIcon />
-            </IconButton>
-          }
-        >
-          <div>
-            <div>Sucesso</div>
-            <Typography level="body-sm" color="success">
-              {successMessage} Em breve entrarei em contato!
-            </Typography>
-          </div>
-        </Alert>
-      )}
+              GARANTIR MEU LIVRO
+            </Button>
+          </Box>
+        </Stack>
+
+      <CheckoutModal
+        open={openModal}
+        onClose={() => setOpenModal(false)}
+      />
     </Container>
   );
 };

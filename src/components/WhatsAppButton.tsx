@@ -16,7 +16,7 @@ export const WhatsAppButton = () => {
       id="wpp-button"
       onClick={handleClick}
       sx={{
-        zIndex: 9999,
+        zIndex: 99,
         position: "fixed",
         bottom: 16,
         right: 16,

@@ -1,17 +1,13 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/joy";
-import { RefObject } from "react";
+import { RefObject, useState } from "react";
 import YoutubeVideo from "./YoutubeVideo";
+import { CheckoutModal } from "./CheckoutModal";
 
-type Props = { plansRef: RefObject<HTMLDivElement> };
+export const HeroSection = () => {
+  const [modalOpen, setModalOpen] = useState(false);
 
-export const HeroSection = ({ plansRef }: Props) => {
-  const handleScrollToPlansRef = () => {
-    if (plansRef.current !== null) {
-      plansRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
+  const handleModalOpen = () => {
+    setModalOpen(true);
   };
 
   return (
@@ -52,14 +48,14 @@ export const HeroSection = ({ plansRef }: Props) => {
             level="body-md"
             textAlign={["center", "left"]}
           >
-            O Brasil Graffiti Book é cheio de imagens originais de muros, portões e paredes <b>direto das ruas de São Paulo</b>, prontas pra você meter sua arte. 
+            O Brasil Graffiti Book é cheio de imagens originais de muros, portões e paredes <b>direto das ruas de São Paulo</b>, prontas pra você mandar sua arte. 
           </Typography>
           <Typography
             level="body-md"
             textAlign={["center", "left"]}
             display={["none", "block"]}
           >
-            Se você é um entusiasta, artista que já tá no corre ou profissional da cena, aqui tá a essência do graffiti na sua forma mais verdadeira. <b>É a representação das ruas, capturada pra você</b> se inspirar e mandar aquele bomb!
+            Se você é um entusiasta, artista que já pinta na rua ou profissional da cena, o livro <b>é a representação das ruas, capturada pra você</b> se inspirar e mandar aquele bomb, persona, agenda de pixo ou o que quiser!
           </Typography>
         </Stack>
         <Box
@@ -76,13 +72,21 @@ export const HeroSection = ({ plansRef }: Props) => {
       </Stack>
       <Box sx={{ display: "flex", justifyContent: "center", mt: [2, 4] }}>
         <Button
-          onClick={handleScrollToPlansRef}
+          size="lg"
+          color="success"
+          onClick={handleModalOpen}
           id="button-checkout-hero"
-        >GARANTIR O MEU BOOK</Button>
+        >
+          GARANTIR MEU LIVRO
+        </Button>
       </Box>
-            <Box sx={{ mt: [2,4] }}>
+      <Box sx={{ mt: [2,4] }}>
         <YoutubeVideo embed="gdRdBVgMOBQ" />
       </Box>
+      <CheckoutModal 
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      />
     </Container>
   );
 };

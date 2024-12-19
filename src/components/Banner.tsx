@@ -1,6 +1,6 @@
-import { Container, IconButton, Stack, Typography } from "@mui/joy";
-import React, { useState } from "react";
 import CloseIcon from "@mui/icons-material/Close";
+import { Container, IconButton, Stack, Typography } from "@mui/joy";
+import { useState } from "react";
 
 export const Banner = () => {
   const [open, setOpen] = useState<boolean>(true);
@@ -11,7 +11,7 @@ export const Banner = () => {
         sx={{
           py: 1.5,
           px: [4, 0],
-          bgcolor: "danger.plainColor",
+          bgcolor: "success.700",
           position: "fixed",
           zIndex: 999,
           top: 0,
@@ -25,7 +25,7 @@ export const Banner = () => {
           sx={{ justifyContent: "center", alignItems: "center" }}
         >
           <Typography textAlign="center" sx={{ color: "white" }}>
-            <strong>ATENÇÃO:</strong> Novas unidades disponíveis! Garanta antes que se esgote de novo!
+            Receba <b>5% de desconto</b> pagando no PIX!
           </Typography>
           <IconButton size="sm" onClick={() => setOpen(false)}>
             <CloseIcon sx={{ color: "white" }} />
