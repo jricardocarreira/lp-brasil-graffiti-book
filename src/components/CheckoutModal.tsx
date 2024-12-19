@@ -115,7 +115,8 @@ export const CheckoutModal = ({ open, onClose }: CheckoutModalProps) => {
                                 width: '100%',
                                 height: 'auto',
                                 borderRadius: 4,
-                                objectFit: 'cover'
+                                objectFit: 'cover',
+                                paddingX: 4
                             }}
                         />
                         <Typography fontSize={14} textAlign="center">
