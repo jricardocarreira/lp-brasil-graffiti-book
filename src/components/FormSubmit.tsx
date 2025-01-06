@@ -1,18 +1,11 @@
-import CheckCircleIcon from "@mui/icons-material/CheckCircle";
-import CloseRoundedIcon from "@mui/icons-material/CloseRounded";
 import {
-  Alert,
   Box,
   Button,
   Container,
-  IconButton,
-  Input,
-  Stack,
-  Typography,
+  Typography
 } from "@mui/joy";
-import posthog from "posthog-js";
-import React, { RefObject, useState } from "react";
-import { CheckoutModal } from "./CheckoutModal";
+import { useState } from "react";
+import { CheckoutModalOutOfStock } from "./CheckoutModalOutOfStock";
 
 export const FormSubmit = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -29,56 +22,61 @@ export const FormSubmit = () => {
         px: [2, 0],
         mt: 4
       }}>
-        <Stack justifyContent="center" alignItems="center">
-          <Typography
-            level="h2"
-            textAlign="center"
-            sx={{ fontSize: [24, 32, 40] }}
-            maxWidth={[250, 550, 600]}
-          >
-            Garanta seu
-            {' '}
-            <Box
-              component={'span'}
-              display={'inline'}
-              sx={{ color: 'primary.500' }}>
-              Brasil Graffiti Book
-            </Box>
-            {' '}
-            por R$98!
-          </Typography>
-          <Stack
-            textAlign="center"
-            maxWidth={[440]}
-            gap={1}
-            sx={{ mb: [2, 4], mt: 1 }}
-          >
-            <Typography
-              level="body-md">
-              Leve as ruas na palma da sua mão e
-              {' '}
-              <Box
-                component={'span'}
-                display={'inline'}
-                sx={{ fontWeight: "700" }}>
-                desenhe graffiti em qualquer hora e lugar!
-              </Box>
-            </Typography>
-          </Stack>
+      <Box
+        sx={{
+          border: '1px solid',
+          borderColor: 'divider',
+          borderRadius: 2,
+          p: 4,
+          maxWidth: 600,
+          mx: 'auto',
+          textAlign: 'center',
+          display: 'flex',
+          flexDirection: 'column',
+          gap: 2
+        }}
+      >
+        <Typography
+          level="h2"
+          sx={{ fontSize: [24, 32], maxWidth: 400, mx: 'auto' }}
+        >
+          Garanta seu Brasil Graffiti Book
+        </Typography>
 
-          <Box sx={{ display: "flex", justifyContent: "center"}}>
-            <Button
-              size="lg"
-              color="success"
-              onClick={handleModalOpen}
-              id="button-checkout-form"
-            >
-              GARANTIR MEU LIVRO
-            </Button>
+        <Typography
+          level="h1"
+          sx={{ 
+            fontSize: [40, 48],
+            fontWeight: 'bold',
+            color: "success.500"
+          }}
+        >
+          por R$98
+        </Typography>
+
+        <Typography
+          level="body-lg"
+          sx={{ mb: 2 }}
+        >
+          leve as ruas na palma da sua mão e faça{' '}
+          <Box component="span" sx={{ display: 'block' }}>
+            sketches de graffiti em qualquer hora e lugar!
           </Box>
-        </Stack>
+        </Typography>
 
-      <CheckoutModal
+        <Box sx={{ display: "flex", justifyContent: "center" }}>
+        <Button
+          size="lg"
+          color="primary"
+          onClick={handleModalOpen}
+          id="button-checkout-hero"
+        >
+          GARANTIR MEU LIVRO
+        </Button>
+      </Box>
+      </Box>
+
+      <CheckoutModalOutOfStock
         open={openModal}
         onClose={() => setOpenModal(false)}
       />

@@ -2,6 +2,7 @@ import { Box, Button, Container, Stack, Typography } from "@mui/joy";
 import { RefObject, useState } from "react";
 import YoutubeVideo from "./YoutubeVideo";
 import { CheckoutModal } from "./CheckoutModal";
+import { CheckoutModalOutOfStock } from "./CheckoutModalOutOfStock";
 
 export const HeroSection = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -73,7 +74,7 @@ export const HeroSection = () => {
       <Box sx={{ display: "flex", justifyContent: "center", mt: [2, 4] }}>
         <Button
           size="lg"
-          color="success"
+          color="primary"
           onClick={handleModalOpen}
           id="button-checkout-hero"
         >
@@ -83,7 +84,7 @@ export const HeroSection = () => {
       <Box sx={{ mt: [2,4] }}>
         <YoutubeVideo embed="gdRdBVgMOBQ" />
       </Box>
-      <CheckoutModal 
+      <CheckoutModalOutOfStock
         open={modalOpen}
         onClose={() => setModalOpen(false)}
       />
