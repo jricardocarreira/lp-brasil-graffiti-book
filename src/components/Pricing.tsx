@@ -84,28 +84,28 @@ export const Pricing = () => {
 
   const images = [
     {
-      src: "/mockup-4.png",
+      src: "/mockup-4.webp",
       alt: "Brasil Graffiti Book com Personagem"
     },
     {
-      src: "/mockup-6.png",
+      src: "/mockup-6.webp",
       alt: "Brasil Graffiti Book Capa"
     },
     {
-      src: "/mockup-2.png",
+      src: "/mockup-2.webp",
       alt: "Brasil Graffiti Book Aberto"
     },
     {
-      src: "/mockup-3.png",
+      src: "/mockup-3.webp",
       alt: "Brasil Graffiti Book com Letra"
     },
 
     {
-      src: "/mockup-5.png",
+      src: "/mockup-5.webp",
       alt: "Brasil Graffiti Book Folheando"
     },
     {
-      src: "/mockup-7.png",
+      src: "/mockup-7.webp",
       alt: "Brasil Graffiti Book Contra-capa"
     }
   ];
@@ -228,6 +228,9 @@ export const Pricing = () => {
                   opacity: index === currentImageIndex ? 1 : 0,
                   transition: "opacity 0.5s ease-in-out"
                 }}
+                width="800"
+                height="600"
+                loading="lazy"
               />
             ))}
 

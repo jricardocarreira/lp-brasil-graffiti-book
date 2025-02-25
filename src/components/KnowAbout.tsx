@@ -103,7 +103,10 @@ export default function KnowAbout() {
                                 <img 
                                     src={text.src} 
                                     alt={text.highlight} 
-                                    style={{ width: '100%', borderRadius: 8 }} 
+                                    style={{ width: '100%', borderRadius: 8 }}
+                                    width="800"
+                                    height="auto"
+                                    loading="lazy"
                                 />
                             </Box>
                         </Box>
