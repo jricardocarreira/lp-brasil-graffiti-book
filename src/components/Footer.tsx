@@ -2,7 +2,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import YouTubeIcon from '@mui/icons-material/YouTube';
 import { Container, IconButton, Stack, Typography } from "@mui/joy";
 import Link from "next/link";
-import React from "react";
 
 // Adicione o SVG do TikTok
 const TikTokIcon = () => (
@@ -31,17 +30,17 @@ export const Footer = () => {
         sx={{ mb: 1 }}
       >
         <Link href="https://www.instagram.com/brasilgraffitibook" target="_blank">
-          <IconButton size="md" sx={{ "&:hover svg": { color: "gray" } }}>
+          <IconButton aria-label="Instagram" size="md" sx={{ "&:hover svg": { color: "gray" } }}>
             <InstagramIcon sx={{ color: "white" }} />
           </IconButton>
         </Link>
         <Link href="https://www.tiktok.com/@brasilgraffitibook" target="_blank">
-          <IconButton size="md" sx={{ p: 0.7, "&:hover svg": { color: "gray" } }}>
+          <IconButton aria-label="TikTok" size="md" sx={{ p: 0.7, "&:hover svg": { color: "gray" } }}>
             <TikTokIcon />
           </IconButton>
         </Link>
         <Link href="https://www.youtube.com/@bug063" target="_blank">
-          <IconButton size="md" sx={{ "&:hover svg": { color: "gray" } }}>
+          <IconButton aria-label="YouTube" size="md" sx={{ "&:hover svg": { color: "gray" } }}>
             <YouTubeIcon sx={{ color: "white" }} />
           </IconButton>
         </Link>

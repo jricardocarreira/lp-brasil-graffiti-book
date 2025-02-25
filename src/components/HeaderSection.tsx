@@ -30,12 +30,10 @@ export const HeaderSection = () => {
           src="/logo-desktop.webp"
           alt="Brasil Graffiti Book Logo"
           sx={{
-            width: ["300px", "400px"],
-            height: "auto",
             objectFit: "contain",
             content: "url('/logo-desktop.webp')"
           }}
-          width="400"
+          width={["300px", "400px"]}
           height="auto"
           loading="lazy"
         />

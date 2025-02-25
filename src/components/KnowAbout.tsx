@@ -17,19 +17,19 @@ export default function KnowAbout() {
         {
             highlight: "52 fotos originais",
             paragraph: "Capturadas por um fotógrafo profissional que manja do assunto. São imagens de paredes, muros de tijolos, portões de alumínio e até do metrô de São Paulo.",
-            src: "/mockup-5.png",
+            src: "/mockup-5.webp",
             buttonText: "Adquira já",
         },
         {
             highlight: "Ideal pra artistas de todos os níveis",
             paragraph: "Não importa se você quer começar ou se já é da cena, esse sketchbook é o espaço pra você soltar a criatividade e até fazer a galera assinar.",
-            src: "/mockup-4.png",
+            src: "/mockup-4.webp",
             buttonText: "Compre agora",
         },
         {
             highlight: "Imagens no tamanho ideal ",
             paragraph: "Tamanho 29x21cm(A4) pra você destruir no graffiti! Seja pra soltar um throw-up, fazer seu persona ou até fechar uma agenda de pixo.",
-            src: "/mockup-2.png",
+            src: "/mockup-2.webp",
             buttonText: "Leve o seu",
         },
     ];

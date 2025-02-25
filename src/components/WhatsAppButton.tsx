@@ -1,6 +1,5 @@
-import React from "react";
-import { IconButton } from "@mui/joy";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import { IconButton } from "@mui/joy";
 
 export const WhatsAppButton = () => {
   const phoneNumber = "5563981032332";
@@ -28,6 +27,7 @@ export const WhatsAppButton = () => {
         },
       }}
       size="lg"
+      aria-label="Abrir conversa no WhatsApp"
     >
       <WhatsAppIcon sx={{ color: "white", fontSize: 48 }} />
     </IconButton>
