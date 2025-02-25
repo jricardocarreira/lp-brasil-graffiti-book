@@ -25,25 +25,19 @@ export const Footer = () => {
       <Stack
         direction="row"
         alignItems="center"
-        justifyContent={"center"}
-        spacing={1}
-        sx={{ mb: 1 }}
+        justifyContent="center"
+        spacing={2}
+        sx={{ mb: 2 }}
       >
-        <Link href="https://www.instagram.com/brasilgraffitibook" target="_blank">
-          <IconButton aria-label="Instagram" size="md" sx={{ "&:hover svg": { color: "gray" } }}>
-            <InstagramIcon sx={{ color: "white" }} />
-          </IconButton>
-        </Link>
-        <Link href="https://www.tiktok.com/@brasilgraffitibook" target="_blank">
-          <IconButton aria-label="TikTok" size="md" sx={{ p: 0.7, "&:hover svg": { color: "gray" } }}>
-            <TikTokIcon />
-          </IconButton>
-        </Link>
-        <Link href="https://www.youtube.com/@bug063" target="_blank">
-          <IconButton aria-label="YouTube" size="md" sx={{ "&:hover svg": { color: "gray" } }}>
-            <YouTubeIcon sx={{ color: "white" }} />
-          </IconButton>
-        </Link>
+        <IconButton component={Link} href="https://www.instagram.com/brasilgraffitibook" target="_blank" aria-label="Instagram">
+          <InstagramIcon sx={{ color: "white" }} />
+        </IconButton>
+        <IconButton component={Link} href="https://www.tiktok.com/@brasilgraffitibook" target="_blank" aria-label="TikTok">
+          <TikTokIcon />
+        </IconButton>
+        <IconButton component={Link} href="https://www.youtube.com/@bug063" target="_blank" aria-label="YouTube">
+          <YouTubeIcon sx={{ color: "white" }} />
+        </IconButton>
       </Stack>
       <Typography textAlign="center" sx={{ color: "white" }}>
         © BRASIL GRAFFITI BOOK 2025. Todos os direitos reservados.
