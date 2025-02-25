@@ -1,7 +1,5 @@
 import { Box, Button, Container, Stack, Typography } from "@mui/joy";
-import { RefObject, useState } from "react";
-import YoutubeVideo from "./YoutubeVideo";
-import { CheckoutModal } from "./CheckoutModal";
+import { useState } from "react";
 import { CheckoutModalOutOfStock } from "./CheckoutModalOutOfStock";
 
 export const HeroSection = () => {
@@ -14,6 +12,7 @@ export const HeroSection = () => {
   return (
     <Container
       disableGutters
+      maxWidth="md"
       sx={{
         pt: [3, 6],
         px: [2, 0],
@@ -80,9 +79,6 @@ export const HeroSection = () => {
         >
           GARANTIR MEU LIVRO
         </Button>
-      </Box>
-      <Box sx={{ mt: [2,4] }}>
-        <YoutubeVideo embed="gdRdBVgMOBQ" />
       </Box>
       <CheckoutModalOutOfStock
         open={modalOpen}

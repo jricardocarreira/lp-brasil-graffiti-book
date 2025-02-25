@@ -10,7 +10,7 @@ export const Banner = () => {
       <Container
         sx={{
           py: 1.5,
-          px: [4, 0],
+          px: [0, 0],
           bgcolor: "success.700",
           position: "fixed",
           zIndex: 999,
@@ -21,7 +21,7 @@ export const Banner = () => {
       >
         <Stack
           direction="row"
-          spacing={2}
+          spacing={[0, 2]}
           sx={{ justifyContent: "center", alignItems: "center" }}
         >
           <Typography textAlign="center" sx={{ color: "white" }}>

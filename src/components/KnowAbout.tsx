@@ -1,38 +1,43 @@
 import {
     Box,
+    Button,
     Container,
     Stack,
     Typography
 } from "@mui/joy";
 
-export default function Welcome() {
+export default function KnowAbout() {
     const texts = [
         {
-            highlight: "52 fotos originais",
-            paragraph: ", tiradas por um fotógrafo profissional que manja do assunto. São imagens de paredes, muros de tijolos, portões de alumínio e até do metrô de São Paulo.",
-            src: "/showing.webp"
+            highlight: "Pinte com diversos materiais",
+            paragraph: "Canetas tipo Posca, base álcool ou base óleo, tinta spray e pincel podem ser usados! O papel foi feito pra resistir e aguentar a versatilidade dos materiais",
+            src: "/materials.webp",
+            buttonText: "Garanta o seu",
         },
-
+        {
+            highlight: "52 fotos originais",
+            paragraph: "Capturadas por um fotógrafo profissional que manja do assunto. São imagens de paredes, muros de tijolos, portões de alumínio e até do metrô de São Paulo.",
+            src: "/mockup-5.png",
+            buttonText: "Adquira já",
+        },
         {
             highlight: "Ideal pra artistas de todos os níveis",
-            paragraph: "! Não importa se você quer começar ou se já é da cena, esse sketchbook é o espaço pra você soltar a criatividade e até fazer a galera assinar.",
-            src: "/floating.webp" 
-        },
-        {
-            highlight: "Pinte com diversos materiais",
-            paragraph: "! Canetas tipo Posca, base álcool ou base óleo, tinta spray e pincel podem ser usados! O papel foi feito pra resistir e aguentar a versatilidade dos materiais",
-            src: "/materials.webp"
+            paragraph: "Não importa se você quer começar ou se já é da cena, esse sketchbook é o espaço pra você soltar a criatividade e até fazer a galera assinar.",
+            src: "/mockup-4.png",
+            buttonText: "Compre agora",
         },
         {
             highlight: "Imagens no tamanho ideal ",
-            paragraph: "(A4) pra você destruir no graffiti! Seja pra soltar um throw-up, fazer seu persona ou até fechar uma agenda de pixo.",
-            src: "/writing.webp" 
+            paragraph: "Tamanho 29x21cm(A4) pra você destruir no graffiti! Seja pra soltar um throw-up, fazer seu persona ou até fechar uma agenda de pixo.",
+            src: "/mockup-2.png",
+            buttonText: "Leve o seu",
         },
     ];
 
     return (
         <Container
             disableGutters
+            maxWidth="lg"
             sx={{
                 pt: [3, 6],
                 px: [2, 0],
@@ -41,7 +46,7 @@ export default function Welcome() {
                 <Typography
                     level="h2"
                     textAlign="center"
-                    sx={{ fontSize: [24, 32, 40] }}
+                    sx={{ fontSize: [28, 40] }}
                     maxWidth={[450, 450, 550]}
                 >
                     Por que o
@@ -71,15 +76,24 @@ export default function Welcome() {
                                 sx={{ px: [2, 0] }}
                                 textAlign={["center", "start"]}
                             >
-                                <Typography level="body-md">
-                                    <Box
-                                        component={'span'}
-                                        sx={{ color: "primary.500", fontWeight: 700 }}
-                                    >
-                                        {text.highlight}
-                                    </Box>
+                                <Typography level="h3" sx={{ mb: 1, fontWeight: 'bold', color: 'text.primary', fontSize: [24, 32] }}>
+                                    {text.highlight}
+                                </Typography>
+                                <Typography level="body-lg" sx={{ fontSize: [16, 20] }}>
                                     {text.paragraph}
                                 </Typography>
+                                <Button
+                                    variant="solid"
+                                    onClick={() => {
+                                        const pricingSection = document.getElementById('pricing-section');
+                                        if (pricingSection) {
+                                            pricingSection.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }}
+                                    sx={{ mt: 2, borderRadius: 1 }}
+                                >
+                                    {text.buttonText}
+                                </Button>
                             </Box>
 
                             <Box

@@ -22,11 +22,12 @@ export const AboutMe = () => {
 
   return (
     <Container
-    disableGutters
-    sx={{
-      pt: [3, 6],
-      px: [2, 0],
-      mt: [-6, 4]
+      disableGutters
+      maxWidth="md"
+      sx={{
+        pt: [3, 6],
+        px: [2, 0],
+        mt: [-6, 4]
       }}>
       <Grid
         container

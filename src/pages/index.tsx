@@ -1,9 +1,9 @@
 import { AboutMe } from "@/components/AboutMe";
-import { FormSubmit } from "@/components/FormSubmit";
-import { HeroSection } from "@/components/HeroSection";
+import { HeaderSection } from "@/components/HeaderSection";
 import KnowAbout from "@/components/KnowAbout";
+import { Pricing } from "@/components/Pricing";
 import { Questions } from "@/components/Questions";
-import { Container } from "@mui/joy";
+import { VideoSection } from "@/components/VideoSection";
 import Head from "next/head";
 
 export default function Home() {
@@ -22,13 +22,12 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main>
-        <Container maxWidth="md">
-          <HeroSection />
-          <KnowAbout />
-          <FormSubmit />
-          <AboutMe />
-          <Questions />
-        </Container>
+        <HeaderSection />
+        <Pricing />
+        <KnowAbout />
+        <VideoSection />
+        <AboutMe />
+        <Questions />
       </main>
     </>
   );
