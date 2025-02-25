@@ -10,7 +10,11 @@ import {
 
 export const Questions = () => {
   return (
-    <Container disableGutters sx={{ mt: 8, mb: 4, px: [2, 0] }}>
+    <Container
+      disableGutters
+      maxWidth="md"
+      sx={{ mt: 8, mb: 4, px: [2, 0] }}
+    >
       <Typography level="h3" textAlign="center" sx={{ mb: 3 }} color="primary">
         Perguntas Frequentes
       </Typography>
@@ -40,6 +44,14 @@ export const Questions = () => {
         })}
       >
         <Accordion>
+          <AccordionSummary>
+            Posso usar qualquer material no livro?
+          </AccordionSummary>
+          <AccordionDetails>
+            Os principais materiais, sim! O Brasil Graffiti Book é feito de um papel revestido resistente que aceita uma variedade de materiais. Você pode usar Posca, canetas marcadoras, tintas spray, pincel com tinta, squeezers e muito mais. É muita versatilidade!
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
           <AccordionSummary>Não sei graffiti, o livro é para mim?</AccordionSummary>
           <AccordionDetails>
             Com certeza! O Brasil Graffiti Book é perfeito para iniciantes. Se você está começando agora, as fotografias vão te inspirar e ajudar a desenvolver suas habilidades. Você pode usar as páginas para praticar, experimentar novas técnicas e fazer esboços.
@@ -50,15 +62,13 @@ export const Questions = () => {
             Qual o valor do FRETE?
           </AccordionSummary>
           <AccordionDetails>
-            O valor do frete é de R$11,80. Ele é fixo para o Brasil todo pois é enviado pela modalidade Registro Módico, utilizado para o envio de livros, revistas entre outros materiais gráficos
+            O valor do frete é de R$11,80. Ele é fixo para o Brasil todo pois é enviado pela modalidade Registro Módico do Correios, utilizado para o envio de livros, revistas entre outros materiais gráficos
           </AccordionDetails>
         </Accordion>
         <Accordion>
-          <AccordionSummary>
-            Posso usar qualquer material no livro?
-          </AccordionSummary>
+          <AccordionSummary>Quantos dias leva para chegar?</AccordionSummary>
           <AccordionDetails>
-            Os principais materiais, sim! O Brasil Graffiti Book é feito de um papel revestido resistente que aceita uma variedade de materiais. Você pode usar canetas marcadoras, tintas spray, pincel com tinta, squeezers e muito mais. É muita versatilidade!
+            O prazo de entrega é de 5 a 10 dias úteis, dependendo da localidade.
           </AccordionDetails>
         </Accordion>
         <Accordion>
@@ -76,14 +86,6 @@ export const Questions = () => {
           </AccordionDetails>
         </Accordion>
         <Accordion>
-          <AccordionSummary>
-            Como posso comprar o livro?
-          </AccordionSummary>
-          <AccordionDetails>
-            Você pode garantir o seu Brasil Graffiti Book nessa página, no botão verde de "Fazer Pedido". Basta clicar nele e aguardar que eu vou te responder.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
           <AccordionSummary>O livro estará disponível em lojas físicas?</AccordionSummary>
           <AccordionDetails>
             Inicialmente, o Brasil Graffiti Book estará disponível online e também será distribuido nas Lojas Real Grapixo e na Banca Forte, ambas localizadas em Belo Horizonte.
@@ -92,13 +94,13 @@ export const Questions = () => {
         <Accordion>
           <AccordionSummary>Quais as formas de pagamento?</AccordionSummary>
           <AccordionDetails>
-            PIX e Cartão de crédito (à vista/parcelado) via link de pagamento do Mercado Pago
+            PIX e Cartão de crédito (à vista/parcelado) via link de checkout da Pagar.me
           </AccordionDetails>
         </Accordion>
         <Accordion>
           <AccordionSummary>Como posso acompanhar as novidades sobre o Brasil Graffiti Book?</AccordionSummary>
           <AccordionDetails>
-            Siga-me nas redes sociais para ficar por dentro de todas as novidades e conteúdos exclusivos relacionados ao Brasil Graffiti Book. Você pode nos encontrar no Instagram, YouTube e TikTok.
+            Siga-nos nas redes sociais para ficar por dentro de todas as novidades e conteúdos exclusivos relacionados ao Brasil Graffiti Book. Você pode nos encontrar no Instagram, YouTube e TikTok.
           </AccordionDetails>
         </Accordion>
       </AccordionGroup>

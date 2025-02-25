@@ -29,8 +29,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <Analytics />
         <CssBaseline />
         <WhatsAppButton />
-        <Banner />
-        <Header />
+        {/* <Banner /> */}
         <Component {...pageProps} />
         <Footer />
       </PostHogProvider>

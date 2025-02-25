@@ -47,7 +47,7 @@ export const Footer = () => {
         </Link>
       </Stack>
       <Typography textAlign="center" sx={{ color: "white" }}>
-        © BRASIL GRAFFITI BOOK 2024. All rights reserved.
+        © BRASIL GRAFFITI BOOK 2025. Todos os direitos reservados.
       </Typography>
     </Container>
   );

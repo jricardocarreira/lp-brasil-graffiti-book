@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 280">
+  <defs>
+    <style>
+      .b {
+        fill: none;
+        stroke: #64a300;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-width: 10px;
+      }
+    </style>
+  </defs>
+  <circle class="b" cx="96.37" cy="183.63" r="50.19"/>
+  <path class="b" d="M197.33,183.63h46.49c0-81.44-66.02-147.45-147.45-147.45v46.49c55.76,0,100.97,45.2,100.97,100.97Z"/>
+</svg>
