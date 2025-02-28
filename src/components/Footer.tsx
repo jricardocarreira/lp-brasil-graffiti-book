@@ -23,25 +23,31 @@ export const Footer = () => {
       maxWidth={false}
     >
       <Stack
-        direction="row"
+        direction="column"
+        justifyContent="start"
         alignItems="center"
-        justifyContent="center"
         spacing={2}
-        sx={{ mb: 2 }}
       >
-        <IconButton component={Link} href="https://www.instagram.com/brasilgraffitibook" target="_blank" aria-label="Instagram">
-          <InstagramIcon sx={{ color: "white" }} />
-        </IconButton>
-        <IconButton component={Link} href="https://www.tiktok.com/@brasilgraffitibook" target="_blank" aria-label="TikTok">
-          <TikTokIcon />
-        </IconButton>
-        <IconButton component={Link} href="https://www.youtube.com/@bug063" target="_blank" aria-label="YouTube">
-          <YouTubeIcon sx={{ color: "white" }} />
-        </IconButton>
+        <Stack
+          direction="row"
+          alignItems="center"
+          justifyContent="center"
+          spacing={2}
+        >
+          <IconButton component={Link} href="https://www.instagram.com/brasilgraffitibook" target="_blank" aria-label="Instagram">
+            <InstagramIcon sx={{ color: "white" }} />
+          </IconButton>
+          <IconButton component={Link} href="https://www.tiktok.com/@brasilgraffitibook" target="_blank" aria-label="TikTok">
+            <TikTokIcon />
+          </IconButton>
+          <IconButton component={Link} href="https://www.youtube.com/@bug063" target="_blank" aria-label="YouTube">
+            <YouTubeIcon sx={{ color: "white" }} />
+          </IconButton>
+        </Stack>
+        <Typography textAlign="center" sx={{ color: "white" }}>
+          © BRASIL GRAFFITI BOOK 2025. Todos os direitos reservados.
+        </Typography>
       </Stack>
-      <Typography textAlign="center" sx={{ color: "white" }}>
-        © BRASIL GRAFFITI BOOK 2025. Todos os direitos reservados.
-      </Typography>
     </Container>
   );
 };

@@ -421,7 +421,7 @@ export const Pricing = () => {
             borderColor: "divider",
             borderRadius: 2,
             p: 2,
-            mb: 3
+            mb: 2
           }}>
             <Typography level="body-sm" sx={{ fontWeight: "bold" }}>
               Cartão de crédito
