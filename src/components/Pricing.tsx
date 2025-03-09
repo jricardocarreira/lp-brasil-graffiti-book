@@ -355,7 +355,7 @@ export const Pricing = () => {
           width: ["100%", "40%"],
           maxWidth: ["none", 400],
           alignSelf: "start",
-          px: [3, 0]
+          px: [2, 0]
         }}>
 
           <Typography
@@ -400,13 +400,14 @@ export const Pricing = () => {
             >
               R$ 120,00
             </Typography>
-            <Stack direction="row" alignItems="baseline" spacing={1}>
+            <Stack direction="row" alignItems={["flex-end", "baseline"]} spacing={1}>
               <Typography
                 level="h2"
                 color="success"
                 sx={{
                   fontSize: "32px",
-                  fontWeight: "bold"
+                  fontWeight: "bold",
+                  whiteSpace: "nowrap"
                 }}
               >
                 R$ 93,10
