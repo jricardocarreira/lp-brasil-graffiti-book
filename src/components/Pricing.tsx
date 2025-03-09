@@ -3,6 +3,7 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import GradeOutlinedIcon from '@mui/icons-material/GradeOutlined';
 import GradeRoundedIcon from '@mui/icons-material/GradeRounded';
+import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import {
   Box,
@@ -73,7 +74,7 @@ const calcularPrevisaoEntrega = (diasUteis: number) => {
     }
   }
 
-  return dataAtual.toLocaleDateString('pt-BR');
+  return dataAtual.toLocaleDateString('pt-BR', { year: '2-digit', month: '2-digit', day: '2-digit' });
 };
 
 export const Pricing = () => {
@@ -402,7 +403,7 @@ export const Pricing = () => {
             <Stack direction="row" alignItems="baseline" spacing={1}>
               <Typography
                 level="h2"
-                color="danger"
+                color="success"
                 sx={{
                   fontSize: "32px",
                   fontWeight: "bold"
@@ -410,8 +411,8 @@ export const Pricing = () => {
               >
                 R$ 93,10
               </Typography>
-              <Typography level="body-sm">
-                no Pix
+              <Typography level="body-sm" sx={{ fontWeight: "500" }}>
+                no PIX (5% de desconto)
               </Typography>
             </Stack>
           </Typography>
@@ -427,7 +428,7 @@ export const Pricing = () => {
               Cartão de crédito
             </Typography>
             <Typography level="body-sm">
-              Em até <b>3x de R$ 32,67</b> sem juros
+              <b>R$ 98,00</b> em até <b>3x de R$ 32,67</b> sem juros
             </Typography>
           </Box>
 
@@ -480,13 +481,16 @@ export const Pricing = () => {
               alignItems: "center",
               mb: 4
             }}>
-              <Box>
-                <Typography level="body-sm" sx={{ fontWeight: "bold" }}>
-                  Envio rápido pra todo Brasil
-                </Typography>
-                <Typography level="body-sm">
-                  Correios - Previsão {calcularPrevisaoEntrega(9)}
-                </Typography>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+                <LocalShippingIcon sx={{ color: 'background.500' }} />
+                <Stack direction="column" spacing={0}>
+                  <Typography level="body-sm" sx={{ fontWeight: "bold" }}>
+                    Envio rápido pra todo Brasil
+                  </Typography>
+                  <Typography level="body-sm">
+                    Correios - Previsão {calcularPrevisaoEntrega(9)}
+                  </Typography>
+                </Stack>
               </Box>
               <Typography level="body-sm" minWidth={65} sx={{ fontWeight: "bold" }}>
                 {getFreteValue(quantity)}
