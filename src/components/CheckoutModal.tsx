@@ -1,6 +1,5 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
 import { Box, Button, IconButton, Modal, Stack, Typography } from '@mui/joy';
-import { useState } from 'react';
 
 type CheckoutModalProps = {
     open: boolean;
@@ -17,29 +16,29 @@ export const CheckoutModal = ({ open, onClose, quantity }: CheckoutModalProps) =
     const handleCheckout = (withStickers: boolean) => {
         const checkoutLinks = {
             1: {
-                withStickers: 'pl_PGwj0kovWRN7e81FkYIM6LJDEKYAB5n9',
-                withoutStickers: 'pl_9VP7owL6YDKZryEHnipaRdMArOEqv1g5'
+                withStickers: 'pl_ykQ6jNgd72aVpOGF97Imp0nKXZ4Al1R3',
+                withoutStickers: 'pl_6MmL5kg8WRa2n1aFPZUBQXlEJAndB9vq'
             },
             2: {
-                withStickers: 'pl_EnNmDRMYkLejADaYSvcVdGabzx17PXvy',
-                withoutStickers: 'pl_PgGw2zMDnNev8natxxSEkJLbWZpEB4lO'
+                withStickers: 'pl_7lGzpor9aVZe8XYsBVfKYegM5LX8Om0w',
+                withoutStickers: 'pl_X6Wp5EDG0nd28DYc0Bsz3241BoVJvaYL'
             },
             3: {
-                withStickers: 'pl_JdomrPVMNGB4JREtbAiY43gOvbQE6kqy',
-                withoutStickers: 'pl_KEoaVpyDrkxmvDMCeuJAnOPw3elbGNz2'
+                withStickers: 'pl_6X2OLK0b1xMEzD0SxtynvljwGyaPVZWR',
+                withoutStickers: 'pl_2zwY84byxDQrbJlsJDspDrZKRAOg6pqa'
             },
             4: {
-                withStickers: 'pl_6QW7X1xdN3wGVPgUW5CRLPKvEYbr8kj5',
-                withoutStickers: 'pl_dDwkZ7OVyxGRm99tlBinmMnJaqNrvz4o'
+                withStickers: 'pl_AEGN2MoO1L07gvvfmMsRDV3qPn9bJyRW',
+                withoutStickers: 'pl_lgoxPeBrnkGZWrgSLxf8x17wzRD42X8p'
             },
             5: {
-                withStickers: 'pl_dq0E4Ko5ABmWvJtPXtAGWrjQYwXaGOkn',
-                withoutStickers: 'pl_l73XNMGyoq0AbQiYoueQ6kO5ZDwW9zQE'
+                withStickers: 'pl_dApxQ8z9WaZ2674XUwUKnoXkGM40e7gj',
+                withoutStickers: 'pl_MKR08VA37B41mwBCPUkgndQmPzjxLrW2'
             }
         };
 
         const linkId = checkoutLinks[quantity as keyof typeof checkoutLinks][withStickers ? 'withStickers' : 'withoutStickers'];
-        const baseUrl = 'https://payment-link.pagar.me';
+        const baseUrl = 'https://payment-link-v3.pagar.me';
         const checkoutUrl = `${baseUrl}/${linkId}`;
         window.location.href = checkoutUrl;
     };

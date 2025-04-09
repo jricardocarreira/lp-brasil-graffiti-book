@@ -429,7 +429,7 @@ export const Pricing = () => {
               Cartão de crédito
             </Typography>
             <Typography level="body-sm">
-              <b>R$ 98,00</b> em até <b>3x de R$ 32,67</b> sem juros
+              <b>R$ 98,00</b> em até <b>2x de R$ 49,00</b> sem juros
             </Typography>
           </Box>
 
@@ -489,7 +489,7 @@ export const Pricing = () => {
                     Envio rápido pra todo Brasil
                   </Typography>
                   <Typography level="body-sm">
-                    Correios - Previsão {calcularPrevisaoEntrega(9)}
+                    Correios - Previsão {calcularPrevisaoEntrega(5)}
                   </Typography>
                 </Stack>
               </Box>
