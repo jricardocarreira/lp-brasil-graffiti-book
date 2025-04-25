@@ -14,9 +14,9 @@ export const VideoSection = () => {
             <Typography
                 level="body-lg"
                 textAlign="center"
-                sx={{ mt: 2, fontSize: [14, 20], color: 'text.secondary' }}
+                sx={{ mt: 2, fontSize: [14, 20], color: 'text.primary' }}
             >
-                Clique no vídeo abaixo e saiba tudo sobre
+                Clique no vídeo abaixo e saiba tudo sobre:
             </Typography>
             <Box sx={{ mt: [0.5, 1] }}>
                 <YoutubeVideo embed="gdRdBVgMOBQ" />

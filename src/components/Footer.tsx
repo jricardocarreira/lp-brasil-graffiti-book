@@ -44,7 +44,7 @@ export const Footer = () => {
             <YouTubeIcon sx={{ color: "white" }} />
           </IconButton>
         </Stack>
-        <Typography textAlign="center" sx={{ color: "white" }}>
+        <Typography textAlign="center" sx={{ color: "#fff" }}>
           © BRASIL GRAFFITI BOOK 2025. Todos os direitos reservados.
         </Typography>
       </Stack>

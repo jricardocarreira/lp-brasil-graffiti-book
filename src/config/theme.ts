@@ -30,7 +30,7 @@ const theme = extendTheme({
         },
         text: {
           primary: "#222",
-          secondary: "#222",
+          secondary: "#666",
         },/* 
         background: {
           body: "#ffffff",       

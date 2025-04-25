@@ -92,9 +92,18 @@ export const CheckoutModal = ({ open, onClose, quantity }: CheckoutModalProps) =
                         Aproveitar essa oferta
                     </Button>
                     <Button
-                        variant="outlined"
-                        color='neutral'
+                        variant="plain"
+                        color="neutral"
                         onClick={() => handleCheckout(false)}
+                        sx={{
+                            border: 'none',
+                            color: 'text.secondary',
+                            textDecoration: 'underline',
+                            '&:hover': {
+                                backgroundColor: 'transparent',
+                                textDecoration: 'underline'
+                            }
+                        }}
                     >
                         {quantity > 1 
                             ? `Continuar com apenas os livros`
