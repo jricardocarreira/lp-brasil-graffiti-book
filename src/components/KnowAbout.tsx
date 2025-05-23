@@ -99,7 +99,6 @@ export default function KnowAbout() {
                                         overflow: 'hidden',
                                         aspectRatio: '16/9',
                                         position: 'relative',
-                                        mb: 2
                                     }}
                                 >
                                     <img 
