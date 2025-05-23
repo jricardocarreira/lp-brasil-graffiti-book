@@ -34,8 +34,9 @@ export default function YoutubeVideo(props: YoutubeVideoProps) {
     url: embedLink,
     width: `${height * 0.5625}px`, // Proporção para shorts (9:16)
     height: `${height}px`,
-    light: true,
-    playing: true
+    light: false, // Mostra o player padrão do YouTube
+    playing: false, // Não inicia automaticamente
+    controls: true // Mostra os controles
   };
 
   return (
