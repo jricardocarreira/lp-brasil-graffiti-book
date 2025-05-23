@@ -23,7 +23,7 @@ export const Testimonials = () => {
     {
       name: "Noguer",
       sign: "@noguer.art13 • Grafiteiro",
-      text: "Gostei muito da ideia do Brasil graffit book, pois ele vai além um livro para interagir com suas artes. Ele possibilita um vivência muitas vezes impossível para a maioria das pessoas que não conhecem nossa cultura, ele pode levar as ruas para dentro de uma sala de aula e discutir diversas formas de interações e intervenções que nossa cidade cinza pede.",
+      text: "Gostei muito da ideia do Brasil Graffiti Book, pois ele vai além um livro para interagir com suas artes. Ele possibilita um vivência muitas vezes impossível para a maioria das pessoas que não conhecem nossa cultura, ele pode levar as ruas para dentro de uma sala de aula e discutir diversas formas de interações e intervenções que nossa cidade cinza pede.",
       avatar: "/nog.jpg"
     }
   ];

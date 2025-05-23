@@ -16,11 +16,17 @@ export const VideoSection = () => {
                 textAlign="center"
                 sx={{ mt: 2, fontSize: [14, 20], color: 'text.primary' }}
             >
-                Clique no vídeo abaixo e saiba tudo sobre:
+                Dá uma olhada no Brasil Graffiti Book:
             </Typography>
-            <Box sx={{ mt: [0.5, 1] }}>
-                <YoutubeVideo embed="gdRdBVgMOBQ" />
+            <Box 
+                sx={{ 
+                    mt: [0.5, 1],
+                    maxWidth: 400,
+                    mx: 'auto'
+                }}
+            >
+                <YoutubeVideo embed="KlC3aiqIfy4" />
             </Box>
-        </Container >
+        </Container>
     );
 }; 
