@@ -3,6 +3,7 @@ import { HeaderSection } from "@/components/HeaderSection";
 import KnowAbout from "@/components/KnowAbout";
 import { Pricing } from "@/components/Pricing";
 import { Questions } from "@/components/Questions";
+import { Testimonials } from "@/components/Testimonials";
 import { VideoSection } from "@/components/VideoSection";
 import Head from "next/head";
 
@@ -25,8 +26,9 @@ export default function Home() {
       <main>
         <HeaderSection />
         <Pricing />
-        <KnowAbout />
         <VideoSection />
+        <KnowAbout />
+        <Testimonials />
         <AboutMe />
         <Questions />
       </main>

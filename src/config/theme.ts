@@ -31,7 +31,7 @@ const theme = extendTheme({
         text: {
           primary: "#222",
           secondary: "#666",
-        },/* 
+        },
         background: {
           body: "#ffffff",       
           level1: "#f8f9fa",      
@@ -40,7 +40,7 @@ const theme = extendTheme({
           popup: "#ffffff",      
           surface: "#f1f3f5",    
           tooltip: "#212529",     
-        } */
+        }
       },
     },
   },
