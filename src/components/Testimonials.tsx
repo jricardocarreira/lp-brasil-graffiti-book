@@ -25,6 +25,12 @@ export const Testimonials = () => {
       sign: "@noguer.art13 • Grafiteiro",
       text: "Gostei muito da ideia do Brasil Graffiti Book, pois ele vai além um livro para interagir com suas artes. Ele possibilita um vivência muitas vezes impossível para a maioria das pessoas que não conhecem nossa cultura, ele pode levar as ruas para dentro de uma sala de aula e discutir diversas formas de interações e intervenções que nossa cidade cinza pede.",
       avatar: "/nog.jpg"
+    },
+    {
+      name: "Mari Monteiro",
+      sign: "@marimonteiro.art • Grafiteira",
+      text: "Muito massa o book. Curti muito para praticar vários estilos, criar conteúdo. Peguei logo na primeira edição e já penso em pegar mais. Estava louca por um desses e a qualidade é incrível.",
+      avatar: "/marimonteiro.jpg"
     }
   ];
 
