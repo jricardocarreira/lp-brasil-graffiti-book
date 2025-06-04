@@ -69,7 +69,7 @@ const calcularPrevisaoEntrega = (diasUteis: number) => {
   while (diasAdicionados < diasUteis) {
     dataAtual.setDate(dataAtual.getDate() + 1);
     const diaSemana = dataAtual.getDay();
-    if (diaSemana !== 0 && diaSemana !== 6) { // Ignorar domingos e sábados
+    if (diaSemana !== 0 && diaSemana !== 6) {
       diasAdicionados++;
     }
   }
@@ -489,7 +489,7 @@ export const Pricing = () => {
                     Envio rápido pra todo Brasil
                   </Typography>
                   <Typography level="body-sm">
-                    Correios - Previsão {calcularPrevisaoEntrega(5)}
+                    Correios - Previsão {calcularPrevisaoEntrega(7)}
                   </Typography>
                 </Stack>
               </Box>
