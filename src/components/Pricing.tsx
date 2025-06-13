@@ -85,7 +85,7 @@ export const Pricing = () => {
 
   const images = [
     {
-      src: "/mockup-4.webp",
+      src: "/mockup-papel.webp",
       alt: "Brasil Graffiti Book com Personagem"
     },
     {
@@ -93,7 +93,7 @@ export const Pricing = () => {
       alt: "Brasil Graffiti Book Capa"
     },
     {
-      src: "/mockup-2.webp",
+      src: "/mockup-materiais.webp",
       alt: "Brasil Graffiti Book Aberto"
     },
     {
@@ -102,7 +102,7 @@ export const Pricing = () => {
     },
 
     {
-      src: "/mockup-5.webp",
+      src: "/mockup-imagens.webp",
       alt: "Brasil Graffiti Book Folheando"
     },
     {
