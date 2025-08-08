@@ -366,8 +366,8 @@ export const Pricing = () => {
           </Typography>
 
           <Rating
-            totalRatings={17}
-            totalScore={163}
+            totalRatings={22}
+            totalScore={212}
             maxScore={10}
           />
 
