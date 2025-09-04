@@ -14,7 +14,7 @@ import {
   Typography
 } from "@mui/joy";
 import { useEffect, useState } from "react";
-import { CheckoutModal } from './CheckoutModal';
+import { Banner } from './Banner';
 
 interface RatingProps {
   totalRatings: number;
@@ -78,7 +78,6 @@ const calcularPrevisaoEntrega = (diasUteis: number) => {
 };
 
 export const Pricing = () => {
-  const [modalOpen, setModalOpen] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [quantity, setQuantity] = useState(1);
@@ -159,12 +158,26 @@ export const Pricing = () => {
     window.open(url, "_blank");
   };
 
+  const handleCheckout = () => {
+    const checkoutLinks = {
+      1: 'pl_qK54aDbERZlmdDVcryIA8YrOnWzVevyN',
+      2: 'pl_nyl7B9NzD3vx3rH1ATv86Qg0oYJd5r8X',
+      3: 'pl_2L1K9wYVveAmbBU44sWDmRdEgn7pjaNB',
+      4: 'pl_pK1e0o5JZ6BqrJlBs6UZ4dgLDxGMnWRz'
+    };
+
+    const linkId = checkoutLinks[quantity as keyof typeof checkoutLinks];
+    const baseUrl = 'https://payment-link-v3.pagar.me';
+    const checkoutUrl = `${baseUrl}/${linkId}`;
+    window.location.href = checkoutUrl;
+  };
+
   const getFreteValue = (quantity: number) => {
     switch (quantity) {
       case 1:
-        return "R$ 11,80";
+        return "R$ 11,95";
       case 2:
-        return "R$ 15,80";
+        return "R$ 15,95";
       case 3:
         return "R$ 20,00";
       case 4:
@@ -175,8 +188,22 @@ export const Pricing = () => {
     }
   };
 
+  const calculatePrice = (quantity: number) => {
+    const basePrice = 98;
+    if (quantity >= 2) {
+      return basePrice * 0.9; // 10% de desconto
+    }
+    return basePrice;
+  };
+
+  const formatPrice = (price: number) => {
+    return price.toFixed(2).replace('.', ',');
+  };
+
   return (
-    <Container
+    <>
+      <Banner />
+      <Container
       id="pricing-section"
       disableGutters
       sx={{
@@ -410,28 +437,24 @@ export const Pricing = () => {
                   whiteSpace: "nowrap"
                 }}
               >
-                R$ 93,10
+                R$ {formatPrice(calculatePrice(quantity))}
               </Typography>
               <Typography level="body-sm" sx={{ fontWeight: "500" }}>
-                no PIX (5% de desconto)
+                no PIX {quantity >= 2 ? "(10% de desconto)" : ""}
               </Typography>
             </Stack>
           </Typography>
 
-          <Box sx={{
-            border: "1px solid",
-            borderColor: "divider",
-            borderRadius: 2,
-            p: 2,
-            mb: 2
-          }}>
-            <Typography level="body-sm" sx={{ fontWeight: "bold" }}>
-              Cartão de crédito
-            </Typography>
-            <Typography level="body-sm">
-              <b>R$ 98,00</b> em até <b>2x de R$ 49,00</b> sem juros
-            </Typography>
-          </Box>
+          <Typography 
+            level="body-sm" 
+            sx={{ 
+              color: "success.500",
+              fontWeight: "500",
+              mb: 2
+            }}
+          >
+            10% de desconto a partir da segunda unidade!
+          </Typography>
 
           <Stack
             direction="row"
@@ -450,12 +473,12 @@ export const Pricing = () => {
             <Button
               fullWidth
               size="lg"
-              color={quantity >= 6 ? "success" : "primary"}
+              color={quantity >= 5 ? "success" : "primary"}
               variant="solid"
-              onClick={quantity >= 6 ? handleWhatsAppClick : () => setModalOpen(true)}
+              onClick={quantity >= 5 ? handleWhatsAppClick : handleCheckout}
               sx={{ borderRadius: 0 }}
             >
-              {quantity >= 6 ? "Conversar no WhatsApp" : "Comprar"}
+              {quantity >= 5 ? "Conversar no WhatsApp" : "Comprar"}
             </Button>
           </Stack>
 
@@ -471,7 +494,7 @@ export const Pricing = () => {
             </Typography>
           </Stack> */}
 
-          {quantity < 6 && (
+          {quantity < 5 && (
             <Box sx={{
               bgcolor: "#f5f5f5",
               p: 2,
@@ -501,11 +524,7 @@ export const Pricing = () => {
         </Box>
       </Stack>
 
-      <CheckoutModal
-        open={modalOpen}
-        onClose={() => setModalOpen(false)}
-        quantity={quantity}
-      />
     </Container>
+    </>
   );
 };
