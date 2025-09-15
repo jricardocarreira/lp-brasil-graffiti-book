@@ -81,7 +81,7 @@ const calcularEstoqueRestante = () => {
   const hoje = new Date();
 
   // Se ainda não chegou na data inicial ou já passou da data final
-  if (hoje < dataInicial) return 30;
+  if (hoje < dataInicial) return 26;
   if (hoje > dataFinal) return 2;
 
   // Calcula o total de dias entre as datas
@@ -89,7 +89,7 @@ const calcularEstoqueRestante = () => {
   const diasPassados = Math.ceil((hoje.getTime() - dataInicial.getTime()) / (1000 * 60 * 60 * 24));
 
   // Calcula o estoque restante proporcionalmente
-  const estoqueRestante = Math.max(2, Math.floor(30 - ((28 * diasPassados) / totalDias)));
+  const estoqueRestante = Math.max(2, Math.floor(26 - ((28 * diasPassados) / totalDias)));
 
   return estoqueRestante;
 };
