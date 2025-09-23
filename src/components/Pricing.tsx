@@ -411,7 +411,7 @@ export const Pricing = () => {
                   fontWeight: "600"
                 }}
               >
-                Restam apenas 9 unidades!
+                Restam apenas 8 unidades!
               </Typography>
             </Stack>
 
