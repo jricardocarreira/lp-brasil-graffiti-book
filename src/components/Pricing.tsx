@@ -75,31 +75,11 @@ const calcularPrevisaoEntrega = (diasUteis: number) => {
   return dataAtual.toLocaleDateString('pt-BR', { year: '2-digit', month: '2-digit', day: '2-digit' });
 };
 
-const calcularEstoqueRestante = () => {
-  const dataInicial = new Date('2025-09-05');
-  const dataFinal = new Date('2025-09-30');
-  const hoje = new Date();
-
-  // Se ainda não chegou na data inicial ou já passou da data final
-  if (hoje < dataInicial) return 26;
-  if (hoje > dataFinal) return 2;
-
-  // Calcula o total de dias entre as datas
-  const totalDias = Math.ceil((dataFinal.getTime() - dataInicial.getTime()) / (1000 * 60 * 60 * 24));
-  const diasPassados = Math.ceil((hoje.getTime() - dataInicial.getTime()) / (1000 * 60 * 60 * 24));
-
-  // Calcula o estoque restante proporcionalmente
-  const estoqueRestante = Math.max(2, Math.floor(26 - ((28 * diasPassados) / totalDias)));
-
-  return estoqueRestante;
-};
 
 export const Pricing = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
   const [quantity, setQuantity] = useState(1);
-  const [estoqueRestante, setEstoqueRestante] = useState(calcularEstoqueRestante());
-
   const images = [
     {
       src: "/mockup-papel.webp",
@@ -145,15 +125,6 @@ export const Pricing = () => {
       }
     };
   }, [isAutoPlaying, images.length]);
-
-  // Atualiza o estoque a cada minuto
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setEstoqueRestante(calcularEstoqueRestante());
-    }, 60000);
-
-    return () => clearInterval(interval);
-  }, []);
 
   const handlePrevious = () => {
     setIsAutoPlaying(false);
@@ -440,7 +411,7 @@ export const Pricing = () => {
                   fontWeight: "600"
                 }}
               >
-                Restam apenas {estoqueRestante} unidades!
+                Restam apenas 9 unidades!
               </Typography>
             </Stack>
 
