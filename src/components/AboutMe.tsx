@@ -46,6 +46,8 @@ export const AboutMe = () => {
           <Typography level="body-sm" sx={{ mt: 2 }} textAlign={["center", "left"]}>
             Sou grafiteiro há 13 anos, natural de Palmas, Tocantins, na Região Norte do Brasil. Além do graffiti, faço arte digital, adesivos, quadros e customizações, usando minha arte para desenvolver projetos que beneficiem a comunidade e a cultura.
             Um dos meus projetos independentes é o "Cola na Causa", que arrecada recursos para a proteção animal. Faço isso vendendo minhas artes autorais e recebendo doações diretas para o projeto. O projeto realizará sua terceira edição em 2024.
+            {' '}
+            Hoje sigo evoluindo o projeto com o Picos de Graffiti, trazendo ainda mais possibilidades pra quem vive o graffiti.
           </Typography>
         </Grid>
         <Grid xs={12} sm={4}>

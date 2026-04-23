@@ -1,4 +1,5 @@
 import { Box, Container, Typography } from "@mui/joy";
+import { PicosButton } from "./PicosButton";
 import YoutubeVideo from "./YoutubeVideo";
 
 export const VideoSection = () => {
@@ -16,7 +17,7 @@ export const VideoSection = () => {
                 textAlign="center"
                 sx={{ mt: 2, fontSize: [14, 20], color: 'text.primary' }}
             >
-                Dá uma olhada no Brasil Graffiti Book:
+                Assista ao vídeo e conheça o Picos de Graffiti por dentro
             </Typography>
             <Box 
                 sx={{ 
@@ -25,7 +26,19 @@ export const VideoSection = () => {
                     mx: 'auto'
                 }}
             >
-                <YoutubeVideo embed="KlC3aiqIfy4" />
+                <YoutubeVideo embed="ydsxirYGn_c" />
+            </Box>
+            <Typography
+                level="body-md"
+                textAlign="center"
+                sx={{ mt: 2 }}
+            >
+                Curtiu essa proposta? O próximo passo é conhecer o Picos 👇
+            </Typography>
+            <Box sx={{ display: "flex", justifyContent: "center", mt: 1.5 }}>
+                <Box sx={{ width: "100%", maxWidth: 320 }}>
+                    <PicosButton fullWidth />
+                </Box>
             </Box>
         </Container>
     );

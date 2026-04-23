@@ -5,6 +5,7 @@ import {
   AccordionGroup,
   AccordionSummary,
   Container,
+  Link,
   Typography
 } from "@mui/joy";
 
@@ -45,6 +46,20 @@ export const Questions = () => {
       >
         <Accordion>
           <AccordionSummary>
+            O Brasil Graffiti Book ainda está disponível?
+          </AccordionSummary>
+          <AccordionDetails>
+            Não. Todas as unidades foram vendidas.
+            <br />
+            Mas você pode conhecer o Picos de Graffiti, que é a evolução do projeto.
+            {' '}
+            <Link href="https://picosdegraffiti.com.br" target="_blank" rel="noopener noreferrer">
+              Conhecer o Picos de Graffiti
+            </Link>
+          </AccordionDetails>
+        </Accordion>
+        <Accordion>
+          <AccordionSummary>
             Posso usar qualquer material no livro?
           </AccordionSummary>
           <AccordionDetails>
@@ -59,20 +74,6 @@ export const Questions = () => {
         </Accordion>
         <Accordion>
           <AccordionSummary>
-            Qual o valor do FRETE?
-          </AccordionSummary>
-          <AccordionDetails>
-            O valor do frete é de R$11,80. Ele é fixo para o Brasil todo pois é enviado pela modalidade Registro Módico do Correios, utilizado para o envio de livros, revistas entre outros materiais gráficos
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>Quantos dias leva para chegar?</AccordionSummary>
-          <AccordionDetails>
-            O prazo de entrega é de 5 a 10 dias úteis, dependendo da localidade.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>
             Quantas folhas tem no livro?
           </AccordionSummary>
           <AccordionDetails>
@@ -83,18 +84,6 @@ export const Questions = () => {
           <AccordionSummary>Já faço graffiti, como posso usar o livro?</AccordionSummary>
           <AccordionDetails>
             Se você já é grafiteiro, o Brasil Graffiti Book é perfeito para convidar outros artistas para deixar suas assinaturas e personas nele. É uma maneira única de registrar as conexões que o graffiti faz na sua vida.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>O livro estará disponível em lojas físicas?</AccordionSummary>
-          <AccordionDetails>
-            Inicialmente, o Brasil Graffiti Book estará disponível online e também será distribuido nas Lojas Real Grapixo e na Banca Forte, ambas localizadas em Belo Horizonte.
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary>Quais as formas de pagamento?</AccordionSummary>
-          <AccordionDetails>
-            PIX e Cartão de crédito (à vista/parcelado) via link de checkout da Pagar.me
           </AccordionDetails>
         </Accordion>
         <Accordion>

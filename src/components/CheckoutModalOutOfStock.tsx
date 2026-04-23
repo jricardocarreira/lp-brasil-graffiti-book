@@ -1,6 +1,7 @@
 import CloseRoundedIcon from '@mui/icons-material/CloseRounded';
-import { Box, Button, IconButton, Modal, Option, Select, Stack, Typography } from '@mui/joy';
+import { Box, IconButton, Modal, Option, Select, Stack, Typography } from '@mui/joy';
 import { useState } from 'react';
+import { PicosButton } from './PicosButton';
 
 type CheckoutModalProps = {
     open: boolean;
@@ -14,24 +15,6 @@ export const CheckoutModalOutOfStock = ({ open, onClose }: CheckoutModalProps) =
     const handleClose = () => {
         setQuantity('1');
         onClose();
-    };
-
-    const handleContinue = () => {
-        if (quantity === 'more') {
-            window.location.href = 'https://wa.me/5563981032332?text=Olá!%20Tenho%20interesse%20em%20comprar%20mais%20de%205%20unidades%20do%20Brasil%20Graffiti%20Book';
-        } else {
-            const checkoutLinks = {
-                '1': 'pl_PGwj0kovWRN7e81FkYIM6LJDEKYAB5n9',
-                '2': 'pl_EnNmDRMYkLejADaYSvcVdGabzx17PXvy',
-                '3': 'pl_JdomrPVMNGB4JREtbAiY43gOvbQE6kqy',
-                '4': 'pl_6QW7X1xdN3wGVPgUW5CRLPKvEYbr8kj5',
-                '5': 'pl_dq0E4Ko5ABmWvJtPXtAGWrjQYwXaGOkn'
-            };
-
-            const linkId = checkoutLinks[quantity as keyof typeof checkoutLinks];
-            const checkoutUrl = `https://payment-link.pagar.me/${linkId}`;
-            window.location.href = checkoutUrl;
-        }
     };
 
     return (
@@ -114,12 +97,7 @@ export const CheckoutModalOutOfStock = ({ open, onClose }: CheckoutModalProps) =
                     <Option value="more">Mais de 5 unidades</Option>
                 </Select>
 
-                <Button
-                    onClick={handleContinue}
-                    color={quantity === 'more' ? 'success' : 'primary'}
-                >
-                    {quantity === 'more' ? 'Conversar no WhatsApp' : 'Garantir antecipado'}
-                </Button>
+                <PicosButton fullWidth />
 
                 <Typography fontSize={14} textAlign="center" color="neutral">
                     Novas cópias estarão disponíveis até fevereiro

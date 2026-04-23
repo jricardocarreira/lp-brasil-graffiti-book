@@ -1,10 +1,10 @@
 import {
     Box,
-    Button,
     Container,
     Stack,
     Typography
 } from "@mui/joy";
+import { PicosButton } from "./PicosButton";
 
 export default function KnowAbout() {
     const benefits = [
@@ -151,23 +151,67 @@ export default function KnowAbout() {
                         ))}
                     </Box>
 
-                    <Button
-                        size="lg"
-                        variant="solid"
-                        onClick={() => {
-                            const pricingSection = document.getElementById('pricing-section');
-                            if (pricingSection) {
-                                pricingSection.scrollIntoView({ behavior: 'smooth' });
-                            }
-                        }}
+                    <Box
                         sx={{
                             mt: 2,
-                            borderRadius: 1,
-                            px: 4
+                            p: [2.5, 4],
+                            borderRadius: 0,
+                            background: "#1eac76",
+                            border: "1px solid",
+                            borderColor: "rgba(255,255,255,0.12)",
+                            boxShadow: "lg",
+                            width: "100%",
+                            maxWidth: 900
                         }}
                     >
-                        Quero meu Brasil Graffiti Book
-                    </Button>
+                        <Typography
+                            level="body-sm"
+                            sx={{
+                                display: "inline-block",
+                                mb: 1.2,
+                                px: 1.2,
+                                py: 0.4,
+                                borderRadius: 0,
+                                bgcolor: "rgba(255,255,255,0.16)",
+                                color: "white",
+                                fontWeight: 700
+                            }}
+                        >
+                            PRÓXIMO NÍVEL
+                        </Typography>
+                        <Typography level="h3" sx={{ fontSize: [24, 32], mb: 2, color: "white" }}>
+                            Se você gostou disso, o Picos de Graffiti evolui tudo:
+                        </Typography>
+
+                        <Box
+                            sx={{
+                                display: "grid",
+                                gridTemplateColumns: { xs: "1fr", sm: "repeat(3, 1fr)" },
+                                gap: 1.2,
+                                mb: 2.5
+                            }}
+                        >
+                            <Box sx={{ p: 1.4, borderRadius: 0, bgcolor: "rgba(255,255,255,0.12)" }}>
+                                <Typography level="title-lg" sx={{ color: "white" }}>
+                                    + Mais imagens
+                                </Typography>
+                            </Box>
+                            <Box sx={{ p: 1.4, borderRadius: 0, bgcolor: "rgba(255,255,255,0.12)" }}>
+                                <Typography level="title-lg" sx={{ color: "white" }}>
+                                    + Capa dura e resistente
+                                </Typography>
+                            </Box>
+                            <Box sx={{ p: 1.4, borderRadius: 0, bgcolor: "rgba(255,255,255,0.12)" }}>
+                                <Typography level="title-lg" sx={{ color: "white" }}>
+                                    + Formato mais portátil
+                                </Typography>
+                            </Box>
+                        </Box>
+
+                        <Box sx={{ maxWidth: 420, mx: "auto" }}>
+                            <PicosButton fullWidth />
+                        </Box>
+                    </Box>
                 </Box>
             </Stack>
         </Container>

@@ -3,17 +3,16 @@ import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import FiberManualRecordIcon from '@mui/icons-material/FiberManualRecord';
 import GradeOutlinedIcon from '@mui/icons-material/GradeOutlined';
 import GradeRoundedIcon from '@mui/icons-material/GradeRounded';
-import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import {
   Box,
-  Button,
   Container,
   IconButton,
   Stack,
   Typography
 } from "@mui/joy";
 import { useEffect, useState } from "react";
+import { PicosButton } from "./PicosButton";
 interface RatingProps {
   totalRatings: number;
   totalScore: number;
@@ -59,27 +58,9 @@ const Rating = ({ totalRatings, totalScore, maxScore }: RatingProps) => {
   );
 };
 
-// Função para calcular a previsão de entrega
-const calcularPrevisaoEntrega = (diasUteis: number) => {
-  const dataAtual = new Date();
-  let diasAdicionados = 0;
-
-  while (diasAdicionados < diasUteis) {
-    dataAtual.setDate(dataAtual.getDate() + 1);
-    const diaSemana = dataAtual.getDay();
-    if (diaSemana !== 0 && diaSemana !== 6) {
-      diasAdicionados++;
-    }
-  }
-
-  return dataAtual.toLocaleDateString('pt-BR', { year: '2-digit', month: '2-digit', day: '2-digit' });
-};
-
-
 export const Pricing = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(true);
-  const [quantity, setQuantity] = useState(1);
   const images = [
     {
       src: "/mockup-papel.webp",
@@ -143,59 +124,6 @@ export const Pricing = () => {
   const handleThumbnailClick = (index: number) => {
     setIsAutoPlaying(false);
     setCurrentImageIndex(index);
-  };
-
-  const handleQuantityChange = (change: number) => {
-    setQuantity((prev) => Math.max(1, prev + change));
-  };
-
-  const handleWhatsAppClick = () => {
-    const phoneNumber = "5563981032332";
-    const message = "Olá! Tenho interesse em comprar mais de 5 unidades do Brasil Graffiti Book.";
-    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank");
-  };
-
-  const handleCheckout = () => {
-    const checkoutLinks = {
-      1: 'pl_qK54aDbERZlmdDVcryIA8YrOnWzVevyN',
-      2: 'pl_nyl7B9NzD3vx3rH1ATv86Qg0oYJd5r8X',
-      3: 'pl_2L1K9wYVveAmbBU44sWDmRdEgn7pjaNB',
-      4: 'pl_pK1e0o5JZ6BqrJlBs6UZ4dgLDxGMnWRz'
-    };
-
-    const linkId = checkoutLinks[quantity as keyof typeof checkoutLinks];
-    const baseUrl = 'https://payment-link-v3.pagar.me';
-    const checkoutUrl = `${baseUrl}/${linkId}`;
-    window.location.href = checkoutUrl;
-  };
-
-  const getFreteValue = (quantity: number) => {
-    switch (quantity) {
-      case 1:
-        return "R$ 11,95";
-      case 2:
-        return "R$ 15,95";
-      case 3:
-        return "R$ 20,00";
-      case 4:
-      case 5:
-        return "R$ 25,90";
-      default:
-        return null;
-    }
-  };
-
-  const calculatePrice = (quantity: number) => {
-    const basePrice = 98;
-    if (quantity >= 2) {
-      return basePrice * 0.9; // 10% de desconto
-    }
-    return basePrice;
-  };
-
-  const formatPrice = (price: number) => {
-    return price.toFixed(2).replace('.', ',');
   };
 
   return (
@@ -389,6 +317,10 @@ export const Pricing = () => {
               Brasil Graffiti Book
             </Typography>
 
+            <Typography level="body-sm" sx={{ mb: 0.5, fontWeight: 600 }}>
+              +300 artistas ja experimentaram o Brasil Graffiti Book
+            </Typography>
+
             <Rating
               totalRatings={22}
               totalScore={212}
@@ -399,10 +331,6 @@ export const Pricing = () => {
               PUBLICAÇÃO INDEPENDENTE
             </Typography>
 
-            <Typography level="body-sm" sx={{ mb: 1, color: "success.500" }}>
-              Disponibilidade: PRONTA ENTREGA
-            </Typography>
-
             <Stack sx={{ mb: 2, bgcolor: "danger.500", p: 1, borderRadius: 1, width: "fit-content" }}>
               <Typography
                 level="body-sm"
@@ -411,84 +339,17 @@ export const Pricing = () => {
                   fontWeight: "600"
                 }}
               >
-                Restam apenas 6 unidades!
+                ESGOTADO 🚨
               </Typography>
             </Stack>
 
-            <Typography
-              level="h2"
-              sx={{
-                fontSize: "32px",
-                fontWeight: "bold",
-                mb: 1,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
-                gap: 0.5
-              }}
-            >
-              <Typography
-                level="body-sm"
-                sx={{
-                  textDecoration: "line-through",
-                  color: "neutral.500",
-                }}
-              >
-                R$ 120,00
-              </Typography>
-              <Stack direction="row" alignItems={["flex-end", "baseline"]} spacing={1}>
-                <Typography
-                  level="h2"
-                  color="success"
-                  sx={{
-                    fontSize: "32px",
-                    fontWeight: "bold",
-                    whiteSpace: "nowrap"
-                  }}
-                >
-                  R$ {formatPrice(calculatePrice(quantity))}
-                </Typography>
-                <Typography level="body-sm" sx={{ fontWeight: "500" }}>
-                  no PIX {quantity >= 2 ? "(10% de desconto)" : ""}
-                </Typography>
-              </Stack>
+            <Typography level="body-lg" sx={{ mb: 2 }}>
+              Esse projeto foi um sucesso e marcou a cena e 
+              <Box component="span" sx={{ fontWeight: "bold" }}> agora evoluiu para uma versão mais completa e prática</Box>.
             </Typography>
 
-            <Typography
-              level="body-sm"
-              sx={{
-                color: "success.500",
-                fontWeight: "500",
-                mb: 2
-              }}
-            >
-              10% de desconto a partir da segunda unidade!
-            </Typography>
-
-            <Stack
-              direction="row"
-              alignItems="center"
-              sx={{
-                mb: 2,
-                border: "1px solid",
-                borderColor: "divider",
-                borderRadius: 1,
-                overflow: "hidden"
-              }}
-            >
-              <Button variant="outlined" onClick={() => handleQuantityChange(-1)} sx={{ width: 40, border: "none", borderRadius: 0 }}>-</Button>
-              <Typography sx={{ px: 2, width: 20, textAlign: "center" }}>{quantity}</Typography>
-              <Button variant="outlined" onClick={() => handleQuantityChange(1)} sx={{ width: 40, border: "none", borderRadius: 0 }}>+</Button>
-              <Button
-                fullWidth
-                size="lg"
-                color={quantity >= 5 ? "success" : "primary"}
-                variant="solid"
-                onClick={quantity >= 5 ? handleWhatsAppClick : handleCheckout}
-                sx={{ borderRadius: 0 }}
-              >
-                {quantity >= 5 ? "Conversar no WhatsApp" : "Comprar"}
-              </Button>
+            <Stack sx={{ mb: 4 }}>
+              <PicosButton fullWidth />
             </Stack>
 
             {/*           <Stack direction="row" alignItems="center" spacing={0.5} sx={{ mb: 2 }}>
@@ -503,33 +364,6 @@ export const Pricing = () => {
             </Typography>
           </Stack> */}
 
-            {quantity < 5 && (
-              <Box sx={{
-                bgcolor: "#f5f5f5",
-                p: 2,
-                gap: 1,
-                display: "flex",
-                borderRadius: 1,
-                justifyContent: "space-between",
-                alignItems: "center",
-                mb: 4
-              }}>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-                  <LocalShippingIcon sx={{ color: 'background.500' }} />
-                  <Stack direction="column" spacing={0}>
-                    <Typography level="body-sm" sx={{ fontWeight: "bold" }}>
-                      Envio rápido pra todo Brasil
-                    </Typography>
-                    <Typography level="body-sm">
-                      Correios - Previsão {calcularPrevisaoEntrega(7)}
-                    </Typography>
-                  </Stack>
-                </Box>
-                <Typography level="body-sm" minWidth={65} sx={{ fontWeight: "bold" }}>
-                  {getFreteValue(quantity)}
-                </Typography>
-              </Box>
-            )}
           </Box>
         </Stack>
 
